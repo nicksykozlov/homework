@@ -6,47 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tabletwo</title>
     <style>
-        .first{border: 2px solid black;
-        text-align: center;
-        padding: 20px 40px;}
-        td, tr, th{border: 2px solid black;}
-        table{border-collapse: collapse;}
+        body{margin: 20px;}      
+
+        td, tr, th{border: 2px solid black;
+        text-align: center;}
+      
+        table{border-collapse: collapse;
+        width: 40%; table-layout: fixed;}
+
         caption{text-align: left;
-        margin: 10px; }
+        margin-bottom: 20px; font-size: 30px;}
+
+       .right{padding-right: 3px; text-align: right;}
+
     </style>
 
 </head>
 <body>
     <table>
-        <caption><b></b>Overview 2018</b></caption>
-        <tr class="first">
-            <th class="first">Data/Project</th>
-            <th class="first">P1</th>
-            <th class="first">P2</th>
-            <th class="first">P3</th>
-            <th class="first">P4</th>
-            <th class="first">P5</th>
-        </tr>
+        <colgroup>
+            <col style="background-color: rgb(169, 168, 173); text-align: right;">
+            <col>
+            <col>
+            <col>
+            <col span="1" padding-right: 3px; text-align: right; >
+            <col>
+        </colgroup>
+        <caption><b>Overview <br>2018</b></caption>
         <tr>
-            <td><date>01/2018</date></td>
+            <th>Data/Project</th>
+            <th style="background-color: rgb(169, 168, 173); padding: 10px 15px;">P1</th>
+            <th style="background-color: rgb(169, 168, 173); padding: 10px 15px;">P2</th>
+            <th style="background-color: rgb(169, 168, 173); padding: 10px 15px;">P3</th>
+            <th style="background-color: rgb(169, 168, 173); padding: 10px 15px;">P4</th>
+            <th style="background-color: rgb(169, 168, 173); padding: 10px 15px;">P5</th>
+        </tr>
+
+        <tr>
+            <td><date><b>01/2018</b></date></td>
             <td>$500.00</td>
             <td rowspan="3">$320.00</td>
             <td>$320.00</td>
-            <td>$50</td>
-            <td rowspan="3">$1.500.00</td>
+            <td clas="right">$50.00</td>
+            <td rowspan="3">$1,500.00</td>
         </tr>
+
         <tr>
-            <td><date>02/2018</date></td>
+            <td><date><b>02/2018</b></date></td>
             <td>$620.00</td>
             <td>$420.00</td>
-            <td>$55</td>
+            <td clas="right">$55.00</td>
         </tr>
+
         <tr>
-            <td><date>03/2018</date></td> 
+            <td><date><b>03/2018</b></date></td> 
             <td>$720.00</td>
             <td>$430.00</td>
-            <td>$150</td>
+            <td clas="right">$150.00</td>
+            <tr>
         </tr>
+
+        <tr>
+            <td><date><b>04/2018</b></date></td> 
+            <td>$725.00</td>
+            <td rowspan="3">$450.00</td>
+            <td>$450.00</td>
+            <td clas="right">$350.00</td>
+            <td rowspan="3">$2,900.00</td>
+        </tr>
+                
+        <tr>
+            <td><date><b>05/2018</b></date></td> 
+            <td>$840.00</td>
+            <td>$455.00</td>
+            <td clas="right">$480.00</td>
+        </tr>
+        
+        <tr>
+            <td><date><b>06/2018</b></date></td> 
+            <td>$860.00</td>
+            <td>$500.00</td>
+            <td clas="right">$20.00</td>
+        </tr>
+        
+        <tr>
+            <td><date><b>07/2018</b></date></td> 
+            <td>$510.00</td>
+            <td rowspan="3">$120.00</td>
+            <td>$150.00</td>
+            <td clas="right">$25.00</td>
+            <td rowspan="3">$105.00</td>
+        </tr>
+        
+        <tr>
+            <td><date><b>08/2018</b></date></td> 
+            <td>$480.00</td>
+            <td>$120.00</td>
+            <td clas="right">$30.00</td>
+        </tr>
+
+        <tr>
+            <td><date><b>09/2018</b></date></td> 
+            <td>$470.00</td>
+            <td>$200.00</td>
+            <td clas="right">$40.00</td>        
+        </tr>
+
+        <tr>
+            <td><date><b>10/2018</b></date></td>
+            <td>$580.00</td>
+            <td rowspan="3">$550.00</td>
+            <td>$430.00</td>
+            <td clas="right">$150.00</td>
+            <td rowspan="3">$3,150.00</td>
+        </tr>
+
+        <tr>
+            <td><date><b>11/2018</b></date></td> 
+            <td>$730.00</td>
+            <td>$355.00</td>
+            <td clas="right">$200.00</td>        
+        </tr>
+
+        <tr>
+            <td><date><b>12/2018</b></date></td> 
+            <td>$855.00</td>
+            <td>$490.00</td>
+            <td clas="right">$290.00</td>          
+        </tr>
+        
     </table>
 </body>
 </html>
