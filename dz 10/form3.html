@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    
+    label {
+      margin: 10px;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+
+    .email::before {
+      content: "\2709";
+      margin-right: 5px;
+    }
+    .tel::before {
+      content: "\260E";
+      margin-right: 5px;
+    }
+    .pasword::before {
+      content: "\21BB";
+      margin-right: 5px;
+    }
+    .flag::before {
+      content: "\2691";
+      margin-right: 5px;
+    }
+    .name::before {
+      content: "\263A";
+      margin-right: 5px;
+    }
+    .pin::before {
+      content: "\21B5";
+      margin-right: 5px;
+    }
+    .pas::before {
+      content: "\2712";
+      margin-right: 5px;
+    }
+    .adres::before {
+      content: "\2693";
+      margin-right: 5px;
+    }
+  </style>
+  <body>
+    <h2>personal details</h2>
+<div></div>
+    <form action="">
+      <label class="name">First Name</label>
+      <input type="text" placeholder="First Name" />
+
+      <label class="adres">Adress</label>
+      <textarea name="" id="" cols="20" rows="10"></textarea>
+
+      <label class="pas">Pasword</label>
+      <input type="password" placeholder="Pasword" />
+
+      <label class="pin">Pinocode</label>
+      <input type="password" name="" id="" placeholder="Pincode" />
+    </form>
+
+    <form action="">
+      <label>Last Name</label>
+      <input type="text" placeholder="Last Name" />
+
+      <label class="flag">Country</label>
+
+      <select name="city" id="">
+        <optgroup label="USA">
+          <option value="">Select the Country</option>
+          <option value="">New York</option>
+          <option value="">Brooklin</option>
+        </optgroup>
+
+        <optgroup label="SSSR">
+          <option value="">Нижний Тагил</option>
+          <option value="">Варкута</option>
+          <option>Магадан</option>
+        </optgroup>
+      </select>
+
+      <label class="email" for="">Email</label>
+      <input type="email" placeholder="example@email.com" />
+
+      <label class="pasword" for=""> Confirm Pasword </label>
+      <input type="password" placeholder="Conform Password" />
+
+      <label class="tel" for="">Contact Number</label>
+      <input type="number" name="" id="" placeholder="Contact Number" />
+    </form>
+  </div>
+  </body>
+</html>

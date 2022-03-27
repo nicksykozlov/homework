@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     
+     
+      section {
+        margin: 20px;
+        display: flex;
+        justify-content: start;
+      }
+     
+    
+      section label {
+        width: 15%;
+        display: block;
+      }
+      .inline {
+        display: flex;
+      }
+      .inline li {
+        margin-right: 30px;
+      }
+      textarea {
+        width: 200px;
+        height: 20px;
+      }
+      .first{counter-reset: section;  list-style-type: none; }
+      .first > button::before{ counter-increment: button; content: " " counter(button)}
+      li {
+  counter-reset: example 1;
+}
+    </style>
+  </head>
+  <body>
+    <form>
+      <ol>
+        <li>
+          <section>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" />
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="pasword">Пароль:</label>
+            <input type="password" id="pasword" />
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="pol">Пол:</label>
+            <span>мужской</span>
+            <input type="radio" name="" id="pol" />
+            <span>женский</span>
+            <input type="radio" name="" id="pol" />
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="ur">Ваши увлечения:</label>
+            <input type="checkbox" name="" id="ur" />
+            <span>Видео</span>
+            <input type="checkbox" name="" id="ur" />
+            <span>Рисование</span>
+            <input type="checkbox" name="" id="ur" />
+            <span>Музыка</span>
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="city">Ваш город</label>
+            <select name="city" id="">
+              <optgroup label="Север">
+                <option value="city">Нижний Тагил</option>
+                <option value="city">Магадан</option>
+                <option value="city">Верхний Тагил</option>
+              </optgroup>
+              <optgroup label="Юг">
+                <option value="city">Сочи</option>
+                <option value="city">Адлер</option>
+                <option value="city">Алушта</option>
+              </optgroup>
+            </select>
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="osebe">Кратко о себе</label>
+            <textarea name="osebe" id="" cols="10" rows="5"></textarea>
+          </section>
+        </li>
+
+        <li>
+          <section>
+            <label for="file">Аватар</label>
+            <input type="text" />
+
+            <button>Обзор</button>
+          </section>
+        </li>
+
+        <li class="first">
+          <button>Сброс</button>
+
+          <button>Подтверждаю</button>
+
+          <button>Кликни по мне просто так</button>
+        </li>
+      </ol>
+    </form>
+  </body>
+</html>

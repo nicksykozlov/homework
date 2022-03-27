@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        margin: 5px 0;
+      }
+      section {
+        display: flex;
+        flex: start;
+        margin: 20px;
+      }
+      input {
+        margin-right: 20px;
+      }
+      p {
+        margin-left: 20px;
+      }
+      .one {
+        display: flex;
+        flex-direction: column;
+        margin-right: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <form action="practic">
+        <h1>Форма обратной связи</h1>
+        <section>
+          <input type="text" id="name" name="user_name" />
+          <label for="name">Ваше Имя</label>
+        </section>
+        <section>
+          <input type="email" id="mail" name="user_name" />
+          <label for="mail"> Электроная почта</label>
+        </section>
+        <section>
+          <input type="text" id="tema" name="user_name" />
+          <label for="tema">Тема сообщения</label>
+        </section>
+
+        <section class="one">
+          <label for="area">Текст собщения</label>
+          <textarea name="area" id="area" cols="30" rows="10"></textarea>
+        </section>
+      </form>
+    </fieldset>
+    <button>Отправить</button>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .one::before {
+        content: "\2709";
+        border: solid 1px;
+      }
+      .two::before {
+        content: "\2751";
+        border: solid 1px;
+      }
+      .three::before {
+        content: "\2639";
+        border: solid 1px;
+      }
+      .for::before {
+        content: "\2639";
+        border: solid 1px;
+      }
+      section {
+        margin: 15px;
+      }
+      .bor{ 
+    display: flex;}
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Responsive Registration Form</h1>
+      <section class="one">
+        <input type="email" placeholder="Email" />
+      </section>
+
+      <section class="two">
+        <input type="password" placeholder="Password" />
+      </section>
+      <section class="two">
+        <input type="password" placeholder="Re-Type-Pasword" />
+      </section>
+
+      <section class="bor">
+
+        <section class="three">
+          <input type="text" placeholder="First Name" />
+        </section>
+
+        <section class="for">
+          <input type="text" placeholder="Last Name" />
+        </section>
+
+      </section>
+
+      <section>
+        <input type="radio" name="" id="" />
+        <label for="">Male</label>
+        <input type="radio" name="" id="" />
+        <label for="">Female</label>
+      </section>
+      <section>
+        <select name="city" id="">
+          <optgroup label="USA">
+            <option value="">Select the Country</option>
+            <option value="">New York</option>
+            <option value="">Brooklin</option>
+          </optgroup>
+
+          <optgroup label="SSSR">
+            <option value="">Нижний Тагил</option>
+            <option value="">Варкута</option>
+            <option>Магадан</option>
+          </optgroup>
+        </select>
+      </section>
+      <section>
+        <input type="checkbox" name="" id="" />
+        <label for="">I agree with terms fnd conditoins</label>
+      </section>
+      <section>
+        <input type="checkbox" name="" id="" />
+        <label for="">I want to receive thу newslatter</label>
+      </section>
+      <button>Register</button>
+    </form>
+  </body>
+</html>
