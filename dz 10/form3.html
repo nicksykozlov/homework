@@ -7,7 +7,6 @@
     <title>Document</title>
   </head>
   <style>
-    
     label {
       margin: 10px;
     }
@@ -47,53 +46,76 @@
       content: "\2693";
       margin-right: 5px;
     }
+    .first {
+      display: flex;
+      margin: 20px;
+    }
   </style>
   <body>
-    <h2>personal details</h2>
-<div></div>
-    <form action="">
-      <label class="name">First Name</label>
-      <input type="text" placeholder="First Name" />
+    <div>
+      <h2>personal details</h2>
 
-      <label class="adres">Adress</label>
-      <textarea name="" id="" cols="20" rows="10"></textarea>
+      <form action="">
+        <section class="first">
+          <section>
+            <label class="name">First Name</label>
+            <input type="text" placeholder="First Name" />
+          </section>
+          <section>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name" />
+          </section>
+        </section>
 
-      <label class="pas">Pasword</label>
-      <input type="password" placeholder="Pasword" />
+        <section class="first">
+          <section>
+            <label class="adres">Adress</label>
+            <textarea name="" id="" cols="20" rows="10"></textarea>
+          </section>
 
-      <label class="pin">Pinocode</label>
-      <input type="password" name="" id="" placeholder="Pincode" />
-    </form>
+          <section>
+            <label class="flag">Country</label>
 
-    <form action="">
-      <label>Last Name</label>
-      <input type="text" placeholder="Last Name" />
+            <select name="city" id="">
+              <optgroup label="USA">
+                <option value="">Select the Country</option>
+                <option value="">New York</option>
+                <option value="">Brooklin</option>
+              </optgroup>
 
-      <label class="flag">Country</label>
+              <optgroup label="SSSR">
+                <option value="">Нижний Тагил</option>
+                <option value="">Варкута</option>
+                <option>Магадан</option>
+              </optgroup>
+            </select>
+            <label class="email" for="">Email</label>
+            <input type="email" placeholder="example@email.com" />
+          </section>
+        </section>
 
-      <select name="city" id="">
-        <optgroup label="USA">
-          <option value="">Select the Country</option>
-          <option value="">New York</option>
-          <option value="">Brooklin</option>
-        </optgroup>
+        <section class="first">
+          <section>
+            <label class="pas">Pasword</label>
+            <input type="password" placeholder="Pasword" />
+          </section>
+          <section>
+            <label class="pasword" for=""> Confirm Pasword </label>
+            <input type="password" placeholder="Conform Password" />
+          </section>
+        </section>
 
-        <optgroup label="SSSR">
-          <option value="">Нижний Тагил</option>
-          <option value="">Варкута</option>
-          <option>Магадан</option>
-        </optgroup>
-      </select>
-
-      <label class="email" for="">Email</label>
-      <input type="email" placeholder="example@email.com" />
-
-      <label class="pasword" for=""> Confirm Pasword </label>
-      <input type="password" placeholder="Conform Password" />
-
-      <label class="tel" for="">Contact Number</label>
-      <input type="number" name="" id="" placeholder="Contact Number" />
-    </form>
-  </div>
+        <section class="first" >
+          <section>
+            <label class="pin">Pinocode</label>
+            <input type="password" name="" id="" placeholder="Pincode" />
+          </section>
+          <section>
+            <label class="tel" for="">Contact Number</label>
+            <input type="number" name="" id="" placeholder="Contact Number" />
+          </section>
+        </section>
+      </form>
+    </div>
   </body>
 </html>
