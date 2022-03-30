@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/62ea28228c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      
+      ul {
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+      }
+      ul > li:last-child {
+        border-bottom: 1px solid lightgray;
+      }
+      a {
+        text-decoration: none;
+        white-space: nowrap;
+        display: block;
+        color: black;
+      }
+      li {
+        width: 100%;
+        padding: 5px;
+        list-style: none;
+        border-top: 1px solid lightgray;
+        transition-duration: 10s;
+      }
+      li ul {
+        display: none;
+      }
+      li:hover ul {
+        display: block;
+        padding-left: 0;
+        position: relative;
+        left: 100px;
+        background-color: rgb(190, 183, 183);
+        border-radius: 5px;
+        border-radius: 5px;
+      }
+      li:hover ul li {
+        background-color: rgb(190, 183, 183);
+        border-radius: 5px;
+      }
+      li:hover ul li:hover ~ .first {
+        display: block;
+      }
+      nav {
+        margin: 10px;
+
+        width: max-content;
+        font-size: 30px;
+
+        padding: 20px;
+      }
+      i {
+        margin-right: 10px;
+      }
+      li ul .first {
+        display: none;
+      }
+      li > ul li a {
+        padding: 10px;
+        text-transform: none;
+        background: #e4e4e5;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#"> <i class="fa-solid fa-user"></i>Profile</a>
+          <ul>
+            <li>
+              <a href="">New</a>
+              <ul class="first">
+                <li><a href="#">New New</a></li>
+                <li><a href="#"> NewOLD</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Live</a>
+              <ul class="first">
+                <li><a href="#">New New</a></li>
+                <li><a href="#"> NewOLD</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Registration</a>
+              <ul class="first">
+                <li><a href="#">New New</a></li>
+                <li><a href="#"> NewOLD</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href=""><i class="fa-solid fa-envelope"></i>Messages</a>
+          <ul>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Sent</a></li>
+            <li><a href="#">Spam</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href=""><i class="fa-solid fa-gear"></i>Settings</a>
+          <ul>
+            <li><a href="#">Defolt</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href=""><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
