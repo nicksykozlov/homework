@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 50px 100px 0 100px;
+        background: #ffffff;
+      }
+      header {
+        margin-bottom: 50px;
+        width: 790px;
+        height: 40px;
+      }
+      a.navbar-brand {
+        padding: 0;
+      }
+      nav > a {
+        width: 133px;
+        height: 30px;
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 30px;
+
+        color: #000638;
+      }
+      ul a {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      .Food {
+        width: 112px;
+        height: 26px;
+
+        background: #283a61;
+        border-radius: 3px;
+        color: #ffffff;
+        text-align: center;
+      }
+      h1 {
+        width: 800px;
+        height: 125px;
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 58px;
+
+        color: #000000;
+      }
+      time {
+        width: 163px;
+        height: 22px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+      }
+      img {
+        width: 800px;
+        height: 278px;
+
+        background: url(image.png);
+        filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 5px;
+      }
+      .face {
+        width: 42px;
+        height: 42px;
+        margin-top: 15px;
+        background: url(image.png);
+        border-radius: 378px;
+      }
+      .george {
+        width: 118px;
+        height: 22px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 160%;
+        color: #000000;
+        background-color: white;
+      }
+      article {
+        width: 800px;
+        height: 133px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 160%;
+        color: #434343;
+      }
+
+      .first > p {
+        width: 800px;
+        height: 132px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        background-color: white;
+        color: #434343;
+        text-align: left;
+      }
+      .second {
+        width: 800px;
+        height: 238px;
+
+        background: #f5f5f5;
+        border: 1px solid #dddddd;
+        box-sizing: border-box;
+        border-radius: 7px;
+      }
+      h3 {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        position: relative;
+        width: 162px;
+        height: 38px;
+        left: 21px;
+        color: #000000;
+      }
+      ol {
+        text-decoration: underline;
+        height: 29px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .art {
+        width: 800px;
+        height: 131px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .h {
+        width: 800px;
+        height: 38px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .three {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .four {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .hh {
+        width: 800px;
+        height: 38px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .five {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .six {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .hhh {
+        width: 800px;
+        height: 38px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .seven {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .eleven {
+        width: 800px;
+        height: 130px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: #434343;
+      }
+      .card {
+        width: 839px;
+        height: 181.34px;
+        border: none;
+      }
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        top: 7px;
+        width: 250px;
+        height: 165.34px;
+      }
+      .card-title {
+        width: 516px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .card-text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        color: #4f4f4f;
+        background-color: #ffffff;
+        width: 512px;
+        height: 66px;
+        text-align: left;
+      }
+      h2 {
+        width: 800px;
+        height: 58px;
+
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 160%;
+        color: #303030;
+      }
+      .ten {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body {
+        padding: 0;
+      }
+      .footer {
+        display: flex;
+        width: 845px;
+        height: 130px;
+        margin-top: 100px;
+        margin-bottom: 300px;
+      }
+      .container {
+        padding: 0;
+      }
+      .navbar {
+        padding: 0;
+      }
+      p {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      footer div a {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+
+        color: #544b44;
+      }
+      footer div {
+        background: #f5f5f5;
+        text-align: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Food Ninja</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Переключатель навигации"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="ten">
+        <p class="Food">Food Theory</p>
+        <h1>
+          What I Learned About Life and <br />
+          Food Backpacking Around Greece
+        </h1>
+        <time>Aug 1, 2021 • 7 min read</time>
+        <img src="Post.jpg" alt="" />
+        <img class="face" src="face.jpg" alt="" />
+        <p class="george">George Costanza</p>
+      </div>
+      <div class="first">
+        <article>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui
+          diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare
+          nulla risus id fames nascetur urna. Eros in neque tincidunt.
+        </article>
+        <p>
+          Vel leo proin facilisis metus sit ut cursus sagittis. Diam donec mus
+          malesuada et ac vulputate. Aenean lacinia suspendisse et mattis
+          adipiscing id dictum commodo nunc. Feugiat lorem cras ut cras enim
+          neque, elit, facilisi habitasse. Facilisis faucibus nunc congue urna
+          diam. Vitae, diam justo, massa, elit. In et nibh ut in diam tellus at
+          tellus diam.
+        </p>
+      </div>
+      <div class="second">
+        <h3>In this article</h3>
+        <ol>
+          <li>How to travel without spending a dime</li>
+          <li>Get the most out of your credit card reward points</li>
+          <li>Why you don’t need more than 3 pieces of clothing</li>
+        </ol>
+      </div>
+      <div>
+        <article class="art">
+          Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut
+          erat in. Et nulla a magna amet, amet. Sodales malesuada laoreet
+          bibendum neque amet turpis non. Ac arcu lacus turpis elementum
+          imperdiet. Euismod purus, libero scelerisque vitae, libero fermentum
+          urna, nunc.
+        </article>
+        <h3 class="h">How to travel without spending a dime</h3>
+        <article class="three">
+          Dignissim lacus sit congue lacus aliquam. Ut non fermentum vulputate
+          donec enim sed ornare scelerisque. Sollicitudin orci leo egestas
+          fermentum platea a imperdiet nisl. Velit placerat nibh nisl ut
+          feugiat. Egestas id egestas nunc mattis. Sed mauris vitae commodo
+          pharetra, vestibulum rhoncus natoque.
+        </article>
+        <article class="four">
+          Leo id aliquet potenti enim sed maecenas sed ornare. Risus nam mauris
+          etiam nibh maecenas nibh interdum mauris suspendisse. Volutpat, enim
+          interdum facilisi mauris vitae id. Vel malesuada sit etiam dolor.
+          Ullamcorper habitant vitae, nec pretium ullamcorper viverra integer
+          praesent tincidunt. At erat sagittis tellus ultricies in a.
+        </article>
+        <h3 class="hh">Get the most out of your credit card reward points</h3>
+        <article class="five">
+          Massa, libero morbi morbi sed non sed. In et neque lectus ultricies
+          leo eros. Auctor in elementum accumsan malesuada gravida neque cursus
+          pellentesque nunc. Dui nullam odio neque varius massa praesent. Neque,
+          porta vel, morbi nulla at tincidunt. Neque, et ultrices duis
+          fermentum, tincidunt sem sed. Erat accumsan dui enim nisl morbi
+          feugiat.
+        </article>
+        <article class="six">
+          Leo id aliquet potenti enim sed maecenas sed ornare. Risus nam mauris
+          etiam nibh maecenas nibh interdum mauris suspendisse. Volutpat, enim
+          interdum facilisi mauris vitae id. Vel malesuada sit etiam dolor.
+          Ullamcorper habitant vitae, nec pretium ullamcorper viverra integer
+          praesent tincidunt. At erat sagittis tellus ultricies in a.
+        </article>
+        <h3 class="hhh">Why you don’t need more than 3 pieces of clothing</h3>
+        <article class="seven">
+          Massa aenean cursus nulla urna dui, fermentum cursus in facilisis.
+          Vulputate euismod vestibulum dolor in elementum quis quis. Erat proin
+          in eget arcu tellus ut ultrices. Quis maecenas ullamcorper ante sit
+          leo placerat. Quisque dictum laoreet eget quam leo tortor scelerisque
+          sit nullam. Lacus, tortor, aenean mattis lobortis lacinia mauris.
+          Viverra nulla.
+        </article>
+        <article class="eleven">
+          Sed pellentesque quam lorem urna. Mauris donec molestie eget massa
+          pellentesque facilisis netus mauris. Magna eget eget sollicitudin at
+          faucibus odio. At augue sit nisi et metus cras dignissim vel, tortor.
+          Maecenas molestie consequat cursus posuere ultrices facilisis hac
+          bibendum semper. Sed lorem vel donec proin. Volutpat aliquet rhoncus
+          sit et.
+        </article>
+      </div>
+      <h2>Keep reading</h2>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="image 5.png" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                Why you don’t need more than 3 pieces of clothing
+              </h5>
+              <p class="card-text">
+                Et vitae, mollis euismod lobortis blandit amet sed amet. Amet ut
+                amet nisl tortor arcu non id nulla mauris neque nisl magna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="image 6.png" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                Why you should cook with your family together everyday
+              </h5>
+              <p class="card-text">
+                Rutrum aliquet eros semper nunc. In adipiscing augue sagittis,
+                fermentum donec nunc lacinia. Risus in egestas in orci quam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card mb-3"
+        style="
+          background: #f5f5f5;
+          border: 1px solid #dddddd;
+          box-sizing: border-box;
+          border-radius: 5px;
+        "
+      >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="image 3.png"
+              class="img-fluid rounded-start"
+              alt="..."
+              style="
+                height: 150px;
+                width: 150px;
+                position: relative;
+                top: 10px;
+                left: 50px;
+              "
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Written by George Costanza</h5>
+              <p class="card-text" style="background: #f5f5f5">
+                Volutpat cursus id id tincidunt duis id. Urna curabitur ultrices
+                molestie bibendum. Purus orci nisl, commodo ipsum, ut urna,
+                elementum. Nunc potenti lectus in erat ligula cras. Eget.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div
+          style="
+            width: 382px;
+            height: 280px;
+            background: #283a61;
+            border-radius: 5px;
+            margin-right: 20px;
+          "
+        >
+          <h5
+            style="
+              font-family: 'Merriweather';
+              font-style: normal;
+              font-weight: 900;
+              font-size: 24px;
+              line-height: 160%;
+
+              text-align: center;
+
+              color: #ffffff;
+            "
+          >
+            Subscribe To <br />
+            Our Newsletter
+          </h5>
+          <p
+            style="
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 160%;
+
+              text-align: center;
+
+              color: #dfe6ff;
+            "
+          >
+            Get weekly food news, articles, and videos delivered to your inbox.
+          </p>
+          <input
+            type="email"
+            placeholder="Email"
+            style="
+              width: 288px;
+              height: 52px;
+              background: #ffffff;
+              border-radius: 3px;
+              margin: 0 20px 20px 20px;
+            "
+          />
+          <br />
+          <a
+            href="#"
+            style="
+              width: 20 px;
+              background: #000638;
+              border-radius: 3px;
+              margin: 20px;
+              font-size: 20px;
+            "
+            >Sign UP</a
+          >
+        </div>
+
+        <div style="margin-right: 20px">
+          <h5>POPULAR POSTS</h5>
+          <p>
+            How To Have Your Cake and Eat It Too: The Way of The Chicken Man
+          </p>
+          <p c>My Grandma’s 30-year-old Recipe</p>
+          <p>What I learned about cooking from Ratatoulie</p>
+        </div>
+
+        <div>
+          <h5>Recent Posts</h5>
+          <p>
+            How To Have Your Cake and Eat It Too: The Way of The Chicken Man
+          </p>
+          <p>My Grandma’s 30-year-old Recipe</p>
+          <p>What I learned about cooking from Ratatoulie</p>
+        </div>
+      </div>
+
+      <footer>
+        <div>
+          <a href="#">About</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact</a>
+
+          <p>Copyright © 2021 Food Ninja Blog. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
