@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .hero {
+      color: white;
+      background-color: blue;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+    }
+    header {
+      background-color: black;
+      color: white;
+    }
+    nav {
+      background-color: rgb(30, 79, 143);
+      color: whitesmoke;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    main {
+      background-color: red;
+      color: whitesmoke;
+     grid-column-start: 1;
+     grid-column-end: 3;
+     grid-row-start: 3;
+     grid-row-end: 5;
+     
+    }
+    .banner {
+      background-color: yellow;
+      grid-row-start: 6;
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+
+    .extra {
+      background-color: greenyellow;
+      grid-column-start: 4;
+      grid-row-start: 3;
+    }
+    .image {
+      background-color: gray;
+      grid-column-start: 4;
+      grid-row-start: 4;
+    }
+    .container > * {
+      text-transform: uppercase;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-template-rows: 50px 200px 70px 70px; 
+    }
+    .toolbar {
+      background-color: rgb(219, 210, 210);
+      grid-column-start: 4;
+      grid-row-start: 1;
+      grid-row-end: 6;
+      z-index: 1;
+      opacity: 0.7;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <nav>Menu</nav>
+      <div class="hero">Hero</div>
+      <main>Main</main>
+      <div class="banner">Banner</div>
+      <div class="extra">Extra</div>
+      <div class="image">Image</div>
+      <div class="toolbar">toolbar</div>
+    </div>
+  </body>
+</html>
