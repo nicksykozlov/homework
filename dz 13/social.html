@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(64, 64, 83);
+      }
+      .conteiner {
+        display: grid;
+        grid-template-columns: repeat(9, 100px);
+        grid-template-rows: repeat(4, 100px);
+        row-gap: 20 px;
+        column-gap: 10px;
+        grid-template-areas:
+          "a b . . . . c d e"
+          "f g . . . . . . .";
+      }
+      .item1 {
+        grid-area: a;
+        border: solid 5px yellow;
+        color: yellow;
+        padding-left: 10px;
+      }
+      .item2 {
+        grid-area: b;
+        border: solid 5px yellow;
+        color: yellow;
+        padding-left: 10px;
+      }
+      .item3 {
+        border: solid 5px blue;
+        color: blue;
+        padding-left: 10px;
+        grid-area: c;
+      }
+      .item4 {
+        border: solid 5px green;
+        color: green;
+        padding-left: 10px;
+        grid-area: d;
+      }
+      .item5 {
+        border: solid 5px green;
+        color: green;
+        grid-area: e;
+      }
+      .item6 {
+        border: solid 5px green;
+        color: green;
+        grid-area: f;
+      }
+      .item7 {
+        border: solid 5px green;
+        color: green;
+        grid-area: g;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="item1">
+        <h2>Li</h2>
+        <p>Linkedin</p>
+      </div>
+      <div class="item2">
+        <h2>Fb</h2>
+        <p>Facebook</p>
+      </div>
+      <div class="item3">
+        <h2>Db</h2>
+        <p>Dribble</p>
+      </div>
+      <div class="item4">
+        <h2>Ct</h2>
+        <p>Comits</p>
+      </div>
+      <div class="item5">
+        <h2>Sl</h2>
+        <p>Slac</p>
+      </div>
+      <div class="item6">
+        <h2>Wk</h2>
+        <p>Wikipedia</p>
+      </div>
+      <div class="item7">
+        <h2>Wk</h2>
+        <p>Wikipedia</p>
+      </div>
+    </div>
+  </body>
+</html>
