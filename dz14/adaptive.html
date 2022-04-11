@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    header {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    header div {
+      border: 1px solid black;
+      background-color: rgba(220, 182, 15, 0.635);
+      width: 100%;
+      height: 100px;
+    }
+    main div article {
+      border: 2px solid black;
+      background-color: yellow;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 100px;
+    }
+    .item1 div {
+      background-color: blue;
+      border: 1ps solid black;
+      height: 100px;
+      width: 100%;
+    }
+    .item1 {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    footer div {
+      background-color: grey;
+      border: 1px solid black;
+      width: 100%;
+      height: 100px;
+    }
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 1024px) {
+      header {
+        flex-direction: column;
+      }
+      .item1 {
+        flex-direction: column;
+      }
+      footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      @media (max-width: 320px) {
+        footer {
+          grid-template-columns: 1fr;
+        }
+        footer div{display: none;}
+        footer div:first-child{display: block;}
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div>dd</div>
+      <div>111</div>
+    </header>
+    <main>
+      <div>
+        <article>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
+          assumenda debitis perferendis quam eius et qui! Nemo possimus neque
+          expedita! Nemo quas voluptatum labore commodi repudiandae, perferendis
+          cupiditate non laboriosam.
+        </article>
+      </div>
+      <div class="item1">
+        <div>ds</div>
+        <div>dsf</div>
+        <div>ds</div>
+      </div>
+    </main>
+    <footer>
+      <div>ds</div>
+      <div>dsf</div>
+      <div>ds</div>
+      <div>ds</div>
+    </footer>
+  </body>
+</html>
