@@ -32,7 +32,7 @@
         background-color: gray;
       }
       .container {
-        display: grid;
+        display: flex;
         grid-template-columns: 300px;
         text-align: center;
         text-transform: uppercase;
@@ -46,6 +46,13 @@
         padding: 20px;
         font-size: 30px;
       }
+      @media (max-width: 1024px) {
+     .container {
+        display: grid ;
+      }
+      
+    }
+      
     </style>
   </head>
   <body>

@@ -11,21 +11,26 @@
       color: white;
       background-color: blue;
       grid-column: span 4;
+      grid-row-start: 2;
     }
     header {
       background-color: black;
       color: white;
+      grid-column-start: 1;
+      grid-row-start: 1;
     }
     nav {
-      background-color: rgb(30, 79, 143);
-      color: whitesmoke;
-      grid-column: span 3;
-
-    }
-    main {
       background-color: red;
       color: whitesmoke;
-      grid-row: span 2;
+      grid-row-start: 1;
+      grid-column-start: 2;
+      grid-column: span 3;
+    }
+    main {
+      background-color: rgb(30, 79, 143);
+      color: whitesmoke;
+      grid-row-start: 3;
+      grid-row-end: 5;
       grid-column: span 2;
     }
     .banner {
@@ -46,13 +51,64 @@
     .container > * {
       text-transform: uppercase;
       font-size: 30px;
-      
-      display: flex; justify-content: center; align-items: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 50px 200px 100px 50px;
+      grid-template-rows: 50px 200px 100px 100px;
+    }
+    @media (max-width: 762px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px 150px 30px 30px 30px 60px 60px 60px;
+      }
+      header {
+        grid-row-start: 1;
+        grid-column: span 4;
+      }
+      .hero {
+        grid-row-start: 2;
+        grid-column: span 4;
+      }
+      nav {
+        grid-row-start: 3;
+        grid-row-end: 9;
+        grid-column-start: 1;
+      }
+      main {
+        grid-column-start: 2;
+        grid-column: span 3;
+        grid-row: span 4;
+      }
+      .banner {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+      .extra {
+        grid-row-start: 8;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      .image {
+        grid-row-start: 8;
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+    }
+    @media (max-width: 320px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .hero, main{
+        height: 80px;
+      }
+      .banner, .baner, .extra, .image{height: 60px;}
     }
   </style>
   <body>
