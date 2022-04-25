@@ -1,0 +1,125 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    font-family: "Philosopher";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.82);
+    }
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-left: 200px;
+    a {
+      text-decoration: none;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #ffffff;
+    }
+  }
+  .language {
+    a {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20px;
+      color: rgba(33, 40, 50, 0.59);
+
+      select {
+        width: 60px;
+        height: 30px;
+        background: inherit;
+
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+        color: rgba(33, 40, 50, 0.59);
+        border: none;
+        option {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 20px;
+          color: rgba(33, 40, 50, 0.59);
+        }
+      }
+    }
+  }
+}
+.contact {
+  button {
+    background: inherit;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    width: 132px;
+    height: 58.67px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    margin-right: 20px;
+  }
+}
+.beaches {
+  word-spacing: 7px;
+  margin-top: 211px;
+  margin-left: 65px;
+  a {
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  a:nth-child(2) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 57px;
+    color: #ffffff;
+    width: 525px;
+    height: 114px;
+  }
+  h2:after {
+    content: url(/assets/img/plane.webp);
+    position: relative;
+    left: 435px;
+    top: -110px;
+  }
+}
+header {
+  background-image: url(/assets/img/fon.png);
+  width: 1440px;
+  height: 900px;
+}
