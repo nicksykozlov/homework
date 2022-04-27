@@ -351,5 +351,5 @@ section.service {
 }
 .news{display: grid;
 grid-template-columns: 1fr 1fr;
-div{}
+.column{display: flex; flex-direction: colum;}
 }
