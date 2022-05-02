@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../fonts/inter-v11-latin-regular.eot"); /* IE9 Compat Modes */
+      src: local(""),
+        url("../fonts/inter-v11-latin-regular.eot?#iefix")
+          format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/inter-v11-latin-regular.woff2")
+          format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/inter-v11-latin-regular.woff")
+          format("woff"),
+        /* Modern Browsers */ url("../fonts/inter-v11-latin-regular.ttf")
+          format("truetype"),
+        /* Safari, Android, iOS */
+          url("../fonts/inter-v11-latin-regular.svg#Inter") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 900;
+      src: url("../fonts/inter-v11-latin-900.eot"); /* IE9 Compat Modes */
+      src: local(""),
+        url("../fonts/inter-v11-latin-900.eot?#iefix")
+          format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/inter-v11-latin-900.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/inter-v11-latin-900.woff")
+          format("woff"),
+        /* Modern Browsers */ url("../fonts/inter-v11-latin-900.ttf")
+          format("truetype"),
+        /* Safari, Android, iOS */ url("../fonts/inter-v11-latin-900.svg#Inter")
+          format("svg"); /* Legacy iOS */
+    }
+    body {
+      width: auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+    header h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Inter";
+      color: black;
+      font-size: 24px;
+      margin: 0;
+      text-align: center;
+      padding-left: 130px;
+    }
+    ul {
+      display: flex;
+      justify-content: end;
+      gap: 32px;
+      padding-right: 130px;
+    }
+    ul li a {
+      text-decoration: none;
+      font-family: "Inter";
+      color: black;
+      font-size: 16px;
+      line-height: 34px;
+      font-weight: 900;
+      font-style: normal;
+    }
+    ul li {
+      list-style: none;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    main section {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    main section h1 {
+      padding: 0 330px;
+      font-family: "Inter";
+      color: black;
+      font-size: 64px;
+      line-height: 77px;
+      font-weight: 900;
+      font-style: normal;
+      text-align: center;
+    }
+    main section p {
+      font-family: "Inter";
+      color: black;
+      font-size: 28px;
+      line-height: 34px;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      padding: 0 120px;
+    }
+    main section a {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      width: 300px;
+      left: 450px;
+      border-radius: 8px;
+      background-color: #6f1df4;
+      text-decoration: none;
+      font-family: "Inter";
+      color: black;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 900;
+      font-style: normal;
+      color: white;
+      text-align: center;
+      padding: 22.5px 60px;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 124px;
+    }
+    footer ul li a {
+      text-decoration: solid rgba(60, 60, 67, 0.85) ;
+      font-family: "Inter";
+      color: black;
+      font-size: 14px;
+      line-height: 34px;
+      font-weight: 400;
+      font-style: normal;
+      color: rgba(60, 60, 67, 0.85);
+    }
+    footer ul li {
+      font-family: "Inter";
+      color: black;
+      font-size: 14px;
+      line-height: 34px;
+      font-weight: 400;
+      font-style: normal;
+      color: rgba(60, 60, 67, 0.85);
+    }
+    input {
+      display: none;
+    }
+  </style>
+  <body>
+    <header>
+      <h4>Logotype</h4>
+      <nav>
+        <input id="menu-toggle" type="checkbox" />
+        <label for="menu-toggle">
+          <span></span>
+        </label>
+        <ul>
+          <li><a href="#">Teoms</a></li>
+          <li><a href="#">Showase</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Your New Project Starts Here!</h1>
+        <p>Etiam turpis iaculis adipiscing diam at pellentesque.</p>
+      </section>
+      <section>
+        <img src="/dz19/Video.png" alt="" />
+        <p>
+          We have created a new product that will help designers, developers
+          and companies create websites for their startups quickly and easily.
+          Habit asse sedinter duma parturient
+        </p>
+        <a href="#">Subscribe on Telegram</a>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>© Copyright</li>
+        <li><a href="#">Showase </a></li>
+        <li><a href="#">Gallery </a></li>
+        <li><a href="#"> Blog</a></li>
+        <li><a href="#"> Developers</a></li>
+        <li><a href="#"> Resources </a></li>
+        <li><a href="#"> Pricing</a></li>
+        <li><a href="#"> Contact </a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
