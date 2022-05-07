@@ -1,0 +1,32 @@
+:root{
+  font-size: 16px;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  margin: 0 auto;
+  width: 1366px;
+  padding: 0;
+}
+section{
+  h3{
+    font-family: 'Yeseva One';
+    font-size: 32px;
+    line-height: 37px;
+    color: $primary;
+    text-align: center;
+    span{
+      margin-bottom: 8px;
+      display: block;
+      color: $secondary;
+      font-family: 'Work Sans';
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+  }
+}
