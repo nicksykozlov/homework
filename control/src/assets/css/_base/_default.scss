@@ -129,7 +129,7 @@ header {
 }
 main {
   .kalib {
-    padding: 150px 100px 120px 100px;
+    padding: 150px 300px 120px 300px;
 
     div:first-child {
       display: flex;
@@ -171,29 +171,257 @@ main {
     }
     .see:hover {
       .hover {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
     }
     .hover {
       display: none;
       position: absolute;
+      top: 90px;
+      left: 80px;
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ed1b1b;
+        font-family: "Muli", sans-serif;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+      }
     }
   }
+
   .tracks {
+    padding-top: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 70px;
+    padding-bottom: 64px;
+    flex-direction: column;
+    border-bottom: 1px solid #efefef;
     h3 {
+      margin: 0;
       font-size: 50px;
       font-weight: 400;
       font-family: "Josefin Sans", sans-serif;
       color: #001d38;
     }
+    h4 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 0;
+      color: #001d38;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #808080;
+      font-family: "Muli", sans-serif;
+    }
+    .latest {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 200px;
+    }
+    button {
+      background: transparent;
+      padding: 12px 42px;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid #ed1b1b;
+      text-align: center;
+      color: #ed1b1b;
+      text-transform: capitalize;
+      width: 180px;
+      height: 50px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ed1b1b;
+      color: #fff;
+      border: 1px solid #ed1b1b;
+      transition: 0.3s;
+    }
   }
 }
+.foto {
+  padding: 150px 350px 150px 350px;
+  
+  h3 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    color: #001d38;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .galery {
+    .one {
+      display: flex;
+      gap: 30px;
+    }
+    .two {
+      margin-top: 30px;
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+footer {
+  background-image: url(/assets/img/contact.webp);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .contact {
+    text-align: center;
+    padding-top: 140px;
+    div {
+      h2 {
+        font-size: 50px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 15px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      button {
+        background: #ed1b1b;
+        padding: 12px 42px;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid #ed1b1b;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        width: 180px;
+        height: 50px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: transparent;
+        color: #ed1b1b;
+        border: 1px solid #ed1b1b;
+        transition: 0.3s;
+      }
+    }
+  }
+  .service {
+    background-color: #032d55;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    div {
+      h4 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+      }
+      input {
+        margin-right: 10px;
+        background: transparent;
+        border: navajowhite;
+        border-bottom: 1px solid #334a60;
+        padding: 12px 0;
+      }
+      input::placeholder {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+      }
+      span {
+        border: none;
+        background: #615cfd;
+        padding: 12px 40px;
 
-@media (min-width: 768px) and (max-width: 1024px) {
+        a {
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 400;
+          color: #fff;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+    }
+    .social {
+      margin-top: 50px;
+      display: flex;
+      gap: 10px;
+    }
+    .info {
+      a {
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 28px;
+        font-weight: 400;
+        font-family: "Josefin Sans", sans-serif;
+        color: #c7c7c7;
+      }
+    }
+  }
+  .copy {
+    padding: 100px 300px 20px 300px;
+    background-color: #032d55;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      gap: 40px;
+      a {
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        color: #808e9c;
+        font-size: 13px;
+        text-transform: capitalize;
+        font-weight: 600;
+       
+      }
+      a:hover {
+        color: white;
+        transition: 0.3s;
+      }
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: #c7c7c7;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: "Muli", sans-serif;
+    a {
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
+body{
+  margin: 0px auto;
+  
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
   .menu-btn {
     display: flex;
     align-items: center;
