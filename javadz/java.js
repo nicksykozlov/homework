@@ -103,26 +103,146 @@
 // let itogViplota=summaZaVesSrok+result+(a++);
 // console.log('общая сумма к выплате в конце срока',itogViplota);
 
-let number=prompt("введите число");
-number %= 10;
-let numberB = 567 % 10;
-let numberC = 56 % 10;
-let numberG = 5 % 10;
+// let number=prompt("введите число");
+// number %= 10;
+// let numberB = 567 % 10;
+// let numberC = 56 % 10;
+// let numberG = 5 % 10;
 
-alert (number + numberB + numberC + numberG);
+// alert (''+number  +numberB  +numberC  +numberG);
+
+// 16.05.2022 занятие 
+
+// блок Else
+// let year = prompt('В каком году была опубликована спецификация ECMAScript-2015?', '');
+// if (year == 2015) {
+//   alert( 'Да вы знаток!' );
+// } else {
+//   alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+// }
+
+//задания 34 задача
+
+// let number = + prompt ('ведите число')
+// if (number > 3){
+//     alert(number + 10);
+// }
+// else{
+//     alert(number - 10)
+// }
+
+//задания 35 задача
+
+// let number = + prompt('В каком году была опубликована спецификация ECMAScript-2015?', '');
+// if (number < 7) {
+//   alert( 'Yes' );
+// }
+// if(number>10)
+// {alert ("No")}
+// if (number==9){
+//     alert("Error")
+// }
+
+// задание 36
+
+// let number = prompt('В каком году была опубликована спецификация ECMAScript-2015?', '');
+// if (number == 1) {
+//   alert( 'Январь' );
+// } else if (number == 2) {
+//     alert( 'Февраль' );
+//   }
+//   else if (number == 3) {
+//     alert( 'Март' );
+//   }
+//   else if (number == 4) {
+//     alert( 'Апрель' );
+//   }
+//   else if (number == 5) {
+//     alert( 'Май' );
+//   }
+//   else if (number == 6) {
+//     alert( 'Июнь' );
+//   }
+//   else if (number == 7) {
+//     alert( 'Июль' );
+//   }
+//   else if (number == 8) {
+//     alert( 'Авуст' );
+//   }
+//   else if (number == 9) {
+//     alert( 'Сентябрь' );
+//   }
+//   else if (number == 10) {
+//     alert( 'Октябрь' );
+//   }
+//   else if (number == 11) {
+//     alert( 'Ноябрь' );
+//   }
+//   else if (number == 12) {
+//     alert( 'Декабрь' );
+//   }
+
+// задание 37
+
+// let numberA = +prompt ("ввидите число")
+// let numberB = +prompt ("Введите число")
+// if (numberA>numberB){
+//     alert(numberA)
+// }
+// else if {
+//     alert(numberB)
+// }
+
+// задание 38 Доделать 
+
+// let numberA = +prompt ("ввидите число")
+// let numberB = +prompt ("Введите число")
+// if (numberA>numberB){
+// let numberC = numberA-numberB;
+// if(numberC>100){
+//     alert('Yes')
+// }
+  
+// }
+// else {
+//     alert(numberB)
+// }
 
 
 
+// циклы
+
+// let i = 0;
+// while (i <=9 ) { // выводит 0, затем 1, затем 2
+//   alert( "You are Welcome" );
+//   i++;
+// }
+
+//zadacha 76
+
+// let x= +prompt ("Choose number")
+// for (let n=0; n<x; n++) {console.log("Silence")}
+
+// zadacha 79 цифры по порядку
+
+// for (let n=1; n<=20; n++) {console.log(n)}
+
+// zadacha 79 цифры по порядку
+
+// for (let n=1001; n<=1025; n=n+3) {console.log(n)}
+
+// for (let n=100; n>=0; n=n-4) {console.log(n)}
+// for (let n=1.2; n<=2.8; n=n+0.2) {console.log(n)}
+
+// let n = +prompt('n') ;
+// let s = 0;
+// for (let i=1; i<=n; i++) {s = s + i;
+// }
+// console.log(s);
+
+let a = +prompt("number 1")
+let b = +prompt("number 2")
+
+for (let i=a; i<=b; i++) {if((i%2)===0) {console.log(i)}}
+
  
-//  a /= 10;
-//  let c = (a % 10) * 100; // 2я цифра нового числа
- 
-// //  a /= 10;
-//  let d = (a % 10) * 10;//  3я цифра нового числа
- 
- 
-//  a /= 10;
-//  let e = a % 10 ;// последняя циффра нового числа
- 
- 
-//  alert( newNumber = b + d + c + e); 
