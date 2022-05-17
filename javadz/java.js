@@ -104,12 +104,12 @@
 // console.log('общая сумма к выплате в конце срока',itogViplota);
 
 let number=prompt("введите число");
-number %= 10;
-let numberB = 567 % 10;
+number = (number%10) ;
+let numberB =  (''+number)[1];
 let numberC = 56 % 10;
 let numberG = 5 % 10;
 
-alert (number + numberB + numberC + numberG);
+alert (numberB);
 
 
 
