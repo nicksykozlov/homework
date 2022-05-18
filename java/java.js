@@ -38,11 +38,11 @@
 // console.log("Общая стоимость", result,);
 
 
-let a = prompt("количество дней ");
-let b = prompt("процент скидки ");
-let b = prompt("сумма");
- a = Number(a);
- b = Number(b);
- с = Number(с);
-let result = (a + b + c);
-console.log("Рузультат", result, a*b);
+// let a = prompt("количество дней ");
+// let b = prompt("процент скидки ");
+// let b = prompt("сумма");
+//  a = Number(a);
+//  b = Number(b);
+//  с = Number(с);
+// let result = (a + b + c);
+// console.log("Рузультат", result, a*b);
