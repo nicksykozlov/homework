@@ -336,20 +336,25 @@
 // }
 // console.log(number)
 
-// // стороки 4 звезды и 7 звезд НЕ ПОНЯЛ КАК ДЕЛАТЬ 
-// let p = 0;
-// let str = "";
-// while (p < 7) {
-//   str += "*******";
-//   console.log(str);
-//   p++;
-//   let p1 = 0;
-//   while (p1 < 1) {
-//     str = "****";
-//     p1++;
-//     console.log(str);
-//   }
-// }
+// // стороки 4 звезды и 7 звезд НЕ ПОНЯЛ КАК ДЕЛАТЬ
+let p = 0;
+let str = "";
+
+while  (p < 7) {
+
+  str += "*******";
+  
+  console.log(str);
+  p++;
+  let p1 = 0;
+ 
+
+  while (p1 < 1) {
+    str = "****";
+    p1++;
+    console.log(str);
+  }
+}
 
 //   console.log(str1);
 
