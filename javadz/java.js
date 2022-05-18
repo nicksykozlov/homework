@@ -240,9 +240,9 @@
 // }
 // console.log(s);
 
-let a = +prompt("number 1")
-let b = +prompt("number 2")
+// let a = +prompt("number 1")
+// let b = +prompt("number 2")
 
-for (let i=a; i<=b; i++) {if((i%2)===0) {console.log(i)}}
+// for (let i=a; i<=b; i++) {if((i%2)===0) {console.log(i)}}
 
  
