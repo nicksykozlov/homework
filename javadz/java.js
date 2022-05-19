@@ -250,6 +250,8 @@
 // let b = +prompt("number 2")
 
 // for (let i=a; i<=b; i++) {if((i%2)===0) {console.log(i)}}
+// let a = 0;
+// alert( Boolean(a) ); // false
 
 // let age = prompt('Возраст?', 18);
 
@@ -335,33 +337,23 @@
 // console.log(number)
 
 // // стороки 4 звезды и 7 звезд НЕ ПОНЯЛ КАК ДЕЛАТЬ
-// let n = 0;
+// let p = 0;
 // let str = "";
 
 // while  (p < 7) {
 
 //   str += "*******";
-
+  
 //   console.log(str);
 //   p++;
 //   let p1 = 0;
-
+ 
 
 //   while (p1 < 1) {
 //     str = "****";
 //     p1++;
 //     console.log(str);
 //   }
-// }
-
-// let n = 90;
-// for (let i=1; i<=n; i++){
-//     if(i%2 == 0){ 
-//         console.log('********') 
-//     }
-//     else {
-//         console.log('****')
-//     }
 // }
 
 //   console.log(str1);
@@ -373,45 +365,3 @@
 //     number=number+n**2;
 // }
 // console.log(number)
-
-// 18.05. занятие 
-
-// let x = 1;
-// for (x; x<=100; x++) {
-// let res = (Math.abs(x-5)-Math.sin(x))/3 + Math.sqrt (Math.pow(x,2) + 2014)*Math.cos(2*x)- 3;
-// console.log(res);}
-// let x =3.6;
-// let res = Math.E**(x-2) + Math.abs(Math.sin(x)) - Math.pow (x,4)*Math.cos(1/x);
-// console.log(res)
-
-// let a = 0.1;
-// let b = 0.2;
-// let x = 1;
-// let res = (Math.pow (x,2) + b **(1/5))
-// зелка из звезд
-// let n = 5;
-// str = ""
-// for (let i=1; i<=n; i++){
-//    str=str+'*';
-//    console.log(str)
-// }
-// Обязательно Разобраться !!!!!!!!!!
-// let k = 30;
-// let m = 30;
-// for (let r = 1; r<=m; r++)
-// {
-//     let s = "" // запускается цикл в котором объявленна переменаяя "" идет к m
-
-//     for (let c = 1; c<=k; c++) 
-//     {
-//         if (c==k || c==1 || c==r || r==1 || r==m || c==m-r) 
-//         {
-//             s=s+"1"
-//         }
-//         else{
-//             s=s+'0'
-//         }
-        
-//     }
-//     console.log (s)
-// }
