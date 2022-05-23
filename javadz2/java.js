@@ -70,15 +70,7 @@
 //     console.log (s)
 // } 
 //Задание 1 
-//1 способ
-// let n = 20;
-// for (let i=1; i<=n; i++){
-//     if(i%2 == 1){ 
-//         console.log('AAABBBAAABBBAAABBB') 
-//     }
-//     else {
-//         console.log('BBBAAABBBAAABBBAAA')
-//     }
+
 // }
 //таких строк n, в каждой строке m троек AAA)
 //AAABBBAAABBBAAABBB
@@ -139,20 +131,40 @@
 //Выведите на экран равнобедренный треугольник с длиной основания n (n должно быть не четным, в противном случае выведите сообщение о ошибке)
 
 // №2
-let str = +prompt('введите кол-во строк', '');
-let sirina = 2 * str;
-for (let r = 1; r <= str; r++) {
-    let s = "";
-    for (let c = 1; c <= sirina; c++) {
-        if (r==1||r==str||c==1||c==sirina) {
-            s = s + "A";
+// let str = +prompt('введите кол-во строк', '');
+// let sirina = 2 * str;
+// for (let r = 1; r <= str; r++) {
+//     let s = "";
+//     for (let c = 1; c <= sirina; c++) {
+//         if (r==1||r==str||c==1||c==sirina) {
+//             s = s + "A";
 
-        } else {
-            s = s + "B";
-        }
-        // console.log(s)
-    }
-    console.log(s)
-}
+//         } else {
+//             s = s + "B";
+//         }
+//         console.log(s)
+//     }
+//     console.log(s)
+// }
 
+// 
+// Задание 1 разобрать 
+// let n = 10;
+// let m = 7;
+// for(let row = 1; row <= n; row++){
+//     let flag = true;
+//     let s = '';
+//     for (let column = 1; column<=m*2; column++){
+//         if(flag){
+//             s=s+ 'AAA'
+//         }
+//         else{
+//             s=s+'BBB'
+//         }
+//         flag=!flag
+//     }
+//     flag=!flag
 
+// console.log (s)
+    
+// }
