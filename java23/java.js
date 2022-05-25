@@ -28,13 +28,14 @@
 
 // Функция два параметра длину и ширину прямоугольника и вычесляет его площадь
 
-function sss(a, b) {
-    let s = a*b;
-    if (b === undefined) {
-     s=Math.pow(a,2)
-    }
-    return s;
-  }
+// function sss(a, b) {
+//     let s = a*b;
+//     if (b === undefined) {
+//      s=Math.pow(a,2)
+//     }
+//     return s;
+//   }
   
- let test = sss(5,48);
- console.log (test);
+//  let test = sss(5,48);
+//  console.log (test);
+
