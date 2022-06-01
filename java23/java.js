@@ -183,20 +183,24 @@
 
 //Елка
 
-let i = 0;
-let j = 0;
-let min = 11; //ширина елки
-let max = 6; // высота елки
-let space = ""; // переменные для -
-let star = ""; // перменная для +
+// let i = 0;
+// let j = 0;
+// let min = 11; //ширина елки
+// let max = 6; // высота елки
+// let space = ""; // переменные для -
+// let star = ""; // перменная для +
 
-while (i < max) {
-  space = "";
-  star = "";
-  for (j = 0; j < max - i; j++) space += " ";
-  for (j = 0; j < 2 * i + 1; j++) star += "+"; // первый плюс на 7 
-  console.log(space + star);
-  i++;
+// while (i < max) {
+//   space = "";
+//   star = "";
+//   for (j = 0; j < max - i; j++) space += " ";
+//   for (j = 0; j < 2 * i + 1; j++) star += "+"; // первый плюс на 7 
+//   console.log(space + star);
+//   i++;
  
+<<<<<<< HEAD
+// }
+=======
 }
 >>>>>>> 08847f489582bfa755ef7955fc432340139c1647
+>>>>>>> 68e1d0e9dd06e203adeb7d9835d7bea52bfd2aea
