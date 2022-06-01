@@ -35,6 +35,12 @@
 //     }
 //     return s;
 //   }
+<<<<<<< HEAD
+  
+//  let test = sss(5,48);
+//  console.log (test);
+
+=======
 
 //  let test = sss(5,48);
 //  console.log (test);
@@ -192,4 +198,9 @@
 //   console.log(space + star);
 //   i++;
  
+<<<<<<< HEAD
 // }
+=======
+}
+>>>>>>> 08847f489582bfa755ef7955fc432340139c1647
+>>>>>>> 68e1d0e9dd06e203adeb7d9835d7bea52bfd2aea
