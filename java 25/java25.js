@@ -86,12 +86,12 @@
 // Дона строка, если ее длина больше, то оставить в строке только первые 6 символов
 // иначе доплнить до 12 
 
-let s = "dsfd"
-if(s.length>10){
-    console.log(s.slice(0, 6));
-}
-else{
-    s = s.padEnd(12, 'o');
-    console.log(s);
-}
+// let s = "dsfd"
+// if(s.length>10){
+//     console.log(s.slice(0, 6));
+// }
+// else{
+//     s = s.padEnd(12, 'o');
+//     console.log(s);
+// }
 
