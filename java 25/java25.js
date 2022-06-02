@@ -53,24 +53,24 @@
 
 //Дана строка Определить обещее количетсво плюсов и минусов, а также сколько символов
 // полсе которых идут цифры
- let s = '+-++0++--0--+++0+---+'
- let pluscount = 0;
- let minuscount = 0;
- let minuswithzeo = 0;
- for (let i = 0; i<s.length; i++){
-     if (s[i]=="+"){
-         pluscount++;
-     }
-     else if (s[i]=='-'){
-         minuscount++;
-     }
-     if((s[i]=='-' || s[i] == "+") && i<s.length-1 && s[i+1]=="0"){
-         minuswithzeo++;
-     }
- }
-console.log(pluscount);
-console.log(minuscount);
-console.log(minuswithzeo);
+//  let s = '+-++0++--0--+++0+---+'
+//  let pluscount = 0;
+//  let minuscount = 0;
+//  let minuswithzeo = 0;
+//  for (let i = 0; i<s.length; i++){
+//      if (s[i]=="+"){
+//          pluscount++;
+//      }
+//      else if (s[i]=='-'){
+//          minuscount++;
+//      }
+//      if((s[i]=='-' || s[i] == "+") && i<s.length-1 && s[i+1]=="0"){
+//          minuswithzeo++;
+//      }
+//  }
+// console.log(pluscount);
+// console.log(minuscount);
+// console.log(minuswithzeo);
 
 // вставить пробелы после каждого символа
 // let s = "dsfgnkjdhaghadf;gh;adk"
