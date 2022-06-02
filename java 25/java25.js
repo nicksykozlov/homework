@@ -72,7 +72,7 @@
 // console.log(minuscount);
 // console.log(minuswithzeo);
 
-// вставить пробелы после каждого символа
+// // вставить пробелы после каждого символа
 // let s = "dsfgnkjdhaghadf;gh;adk"
 // let m = " ";
 // for(let i = 0; i<s.length; i++ ){
@@ -195,7 +195,7 @@
 // //Дана строка str = 1234567 Выведите её в виде 1 234 567
 // let str = "1234567";
 // str = str.slice(0,1)+ " " + str.slice (1,4) + " " +str.slice(4);
-// console.log(str);
+// console.log(str); // счетчик делим на три
 
 //В данной строке найти количество цифр.
 
@@ -263,6 +263,4 @@
 
     // console.log(a);
     
-
-
 
