@@ -240,28 +240,87 @@
 // newarray = newarray.filter((x) => x > around);
 // console.log(newarray);
 
-let str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum similique amet doloribus sunt corrupti impedit vero cupiditate, beatae, hic non dolore officiis eveniet doloremque accusamus laudantium quidem? Modi, quis?'
-let arr = str.split('');
-console.log(arr);
-let newarr = arr.filter(x => x !=='.' && x !==',' ).join('');
-console.log(newarr);
-newarr = newarr.toLocaleLowerCase();
-console.log(newarr);
-let count = str.split(' ').reduce((n, word) => word.length > 6 ? ++n: n, 0);
-console.log(count);
-let maxword = str.split(' ').reduce((word1, word2) => word1.length>word2.length ? word1:word2);
-console.log(maxword);
+// let str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum similique amet doloribus sunt corrupti impedit vero cupiditate, beatae, hic non dolore officiis eveniet doloremque accusamus laudantium quidem? Modi, quis?'
+// let arr = str.split('');
+// console.log(arr);
+// let newarr = arr.filter(x => x !=='.' && x !==',' ).join('');
+// console.log(newarr);
+// newarr = newarr.toLocaleLowerCase();
+// console.log(newarr);
+// let count = str.split(' ').reduce((n, word) => word.length > 6 ? ++n: n, 0);
+// console.log(count);
+// let maxword = str.split(' ').reduce((word1, word2) => word1.length>word2.length ? word1:word2);
+// console.log(maxword);
 
- let upper = str.split(' ').map(word => {
-     let letters = word.split('');
-     letters[0] = letters[0].toLocaleUpperCase();
-     letters[letters.length-1] = letters[letters.length-1].toUpperCase();
-     letters = letters.join('');
-     return letters;
- }).join(' ')
- console.log(upper);
-let por = str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
-console.log(por);
+//  let upper = str.split(' ').map(word => {
+//      let letters = word.split('');
+//      letters[0] = letters[0].toLocaleUpperCase();
+//      letters[letters.length-1] = letters[letters.length-1].toUpperCase();
+//      letters = letters.join('');
+//      return letters;
+//  }).join(' ')
+//  console.log(upper);
+// let por = str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
+// console.log(por);
 
-let first = str.split(' ').map(w=>w[0]);
-console.log(first);
+// let first = str.split(' ').map(w=>w[0]);
+// console.log(first);
+
+// // Готовое решение
+// let arr = [1,2,34,5,6,7,78,8];
+//Сформировать массив из чисел возведенных в куб
+// Отсортировать по убыванию
+// Получить массив из чисел больше среднего
+// Отнять от каждого элемента его индекс
+// Определить есть ли в массиве отрицательные элементы
+// Найти первый элемент массива, который меньше среднего вдвое
+// // Найти максимальный элемент
+// arr = arr.map( n=> n**3);
+// arr = arr.sort( (a,b) => a-b);
+// let summ = 0;
+// arr.forEach( (el) => summ = summ + el);
+// let around = summ/arr.length;
+// arr = arr.filter( (x) => x > around);
+// arr = arr.map( (e,i) => e-i);
+// let res = arr.some(n=> n<0);
+// let first = arr.find(n=> n<around/2);
+// let max = arr[0];
+// arr.forEach( el => {
+//     if(el > max){
+//         max = el;
+//     }
+// })
+// let str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores commodi cupiditate deserunt eligendi error excepturi fugiat illo, libero minima modi numquam quis ratione reiciendis sequi sit soluta voluptatibus.';
+//Строка состоит из слов, разделенных одним пробелoм.
+//Удалите знаки припенания (',' '.') не используя метод replace/replaceAll;
+//Переведите все символы в нижний регистр
+//Переставьте слова в алфавитном порядке.
+//Посчитайте количество слов длина которых больше 6 символов
+//Найдите самое длинное слово
+//Преобразуйте строку так, чтобы каждое слово начиналось и заканчивалось с большой буквы
+//Отразите порядок букв в каждом слове
+//Напишите код, создащий массив, который будет состоять из первых букв слов строки
+//Из получившегося массива удалите дубликаты
+// str = str.split('').filter( c => c !=='.' && c!==',').join('')
+// str = str.toLowerCase();
+// str = str.split(' ').sort().join(' ');
+
+// let count = str.split(' ').reduce( (n, word) =>word.length > 6 ? ++n: n, 0)
+// let maxWord = str.split(' ').reduce( (word1, word2) => word1.length > word2.length ? word1 : word2)
+// str = str.split(' ').map(word => {
+//     let letters = word.split('');
+//     letters[0] = letters[0].toUpperCase();
+//     letters[letters.length-1] = letters[letters.length-1].toUpperCase();
+//     letters = letters.join('');
+//     return letters;
+// }).join(' ');
+// str = str.split(' ').map( word => word.split('').reverse().join('')).join(' ')
+// let letters = str.split(' ').map( w=> w[0]);
+// let copy = letters.reduce( (accum, l) =>{
+//     if(!accum.includes(l)){
+//         accum.push(l)
+//     }
+//     return accum
+// },[])
+
+// console.log(copy);
