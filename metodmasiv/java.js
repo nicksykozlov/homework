@@ -51,9 +51,9 @@
 //     return element >=10;
     
 // }
-let arr = [14, 14, 14, 15].every(elem => elem >=10);
-// let num = arr.every(elem => elem >= 10);
-    console.log(arr);
+// let arr = [14, 14, 14, 15].every(elem => elem >=10);
+// // let num = arr.every(elem => elem >= 10);
+//     console.log(arr);
 
 //ДЗ 08.06
 // let str = 'Lorem ipsum123 dolor 121233 3,7 sit amet, co1nsec856989tetur adipis7cing elit, sed d6o eiusmod temp567or incid6idunt ut l65abore et123 dolore magn256a aliqua. Ut enim4 ad minim veniam, quis nostrud'
