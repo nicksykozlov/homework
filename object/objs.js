@@ -100,9 +100,9 @@
 //     height: 300,
 //     title: "My menu"
 //   };
-  
+
 // //   multiplyNumeric(menu);
-  
+
 //   // после вызова функции
 // //   menu = {
 // //     width: 400,
@@ -138,17 +138,17 @@
 //     name: "Иван",
 //     age: 30
 //   };
-  
+
 //   let clone = {}; // новый пустой объект
-  
+
 //   // скопируем все свойства user в него
 //   for (let key in user) {
 //     clone[key] = user[key];
 //   }
-  
+
 //   // теперь в переменной clone находится абсолютно независимый клон объекта
 //   clone.name = "Пётр"; // изменим в нём данные
-  
+
 //   alert(clone.name); // в оригинальном объекте значение свойства `name` осталось прежним – Иван.
 // Использование Object.assign
 
@@ -180,7 +180,7 @@
 //     name: "Джон",
 //     age: 30
 //   };
-  
+
 //   user.sayHi = function() {
 //     alert("Привет!");
 //   };
@@ -189,30 +189,30 @@
 // let user = {
 //     name: "Джон",
 //     age: 30,
-  
+
 //     sayHi() {
 //       // this - это "текущий объект"
 //       alert(this.name);
 //     }
-  
+
 //   };
-  
+
 //   user.sayHi(); // Джон
 
 // let user = {
 //     name: "Джон",
 //     age: 30,
-  
+
 //     sayHi() {
 //       alert( user.name ); // приведёт к ошибке
 //     }
-  
+
 //   };
 //   user.sayHi();
-  
+
 //   let admin = user;
 //   user = null; // обнулим переменную для наглядности, теперь она не хранит ссылку на объект.
-  
+
 //   admin.sayHi(); // Ошибка! Внутри sayHi() используется user, которая больше не ссылается на объект!
 // Если мы используем this.name вместо user.name внутри alert, тогда этот код будет работать.
 
@@ -238,7 +238,7 @@
 //     name: "Джон",
 //     go: function() { alert(this.name) }
 //   };
-  
+
 //   user.go();
 
 //В представленном ниже коде мы намерены вызвать obj.go() метод 4 раза подряд.
@@ -253,11 +253,11 @@
 //     sum() {
 //       return this.a + this.b;
 //     },
-  
+
 //     mul() {
 //       return this.a * this.b;
 //     },
-  
+
 //     read() {
 //       this.a = +prompt("Введите первое число");
 //       this.b = +prompt("Введите первое число");
@@ -274,10 +274,10 @@
 //     this.name = name;
 //     this.isAdmin = false;
 //   }
-  
+
 //   let user = new User("Вася");
 //   new User("Петя");
-  
+
 //   alert(user.name); // Вася
 //   alert(user.isAdmin); // false
 
@@ -287,91 +287,165 @@
 //   this.name = "Вася";
 //   this.isAdmin = false;
 
-  // ...другой код для создания пользователя
-  // возможна любая сложная логика и выражения
-  // локальные переменные и т. д.
+// ...другой код для создания пользователя
+// возможна любая сложная логика и выражения
+// локальные переменные и т. д.
 
 
 //ДЗ 
 // 1
-// Создайте объект city1 (let city1 = {}), укажите у него свойства name (название города, строка) со значением «ГородN» и population (населенность города, число) со значением 10 млн.
+// Создайте объект city1 (let city1 = {}), укажите у него свойства name (название города, строка) 
+//со значением «ГородN» и population (населенность города, число) со значением 10 млн.
 // Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
 // Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
-// Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями.
-// Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
+// Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в 
+//формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями.
+// Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 
+//метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 
-// function City(name, population) {
-//     this.name = name;
-//     this.population = population;
-        
-//   };
-  
-// // let city1 = new City("Brest", 10e6);
-// let city2 = new City("Grodno", 200);
+// let city1={ 
+//       name:"ГородN", 
+//       populetion: "10 миллионов", 
+//   getCity(){ 
+//       return getObj(); 
+//   }, 
+
+//      }; 
+//   let city2={ 
+//       name:"ГородM", 
+//       populetion:1e6, 
+//   getCity(){ 
+//       return getObj(); 
+//   }, 
+
+//   // }; 
+// function GetName(){ 
+//     return this.name 
+
+// }; 
+// city1.GetName=GetName; 
+// city2.GetName=GetName; 
+
+// console.log(city1.GetName()) 
+// console.log(city2.GetName()) 
+
+// function ExportStr(){ 
+//     return name=${this.name}\npopulation=${this.populetion}\n; 
+//     }; 
+// city1.ExportStr=ExportStr; 
+// city2.ExportStr=ExportStr; 
+// console.log(city1.ExportStr()) 
+// console.log(city2.ExportStr()) 
+
+// // function GetObj(){ 
+// //     return this; 
+// // }; 
+// // city1.getcity=GetObj; 
+// // city2.getcity=GetObj; 
+// // console.log(city1.GetObj()); 
+
+// function getObj(){ 
+//     return this; 
+// }
 
 
-// console.log(city2);
+
+// let city1={ 
+//     name:"ГородN", 
+//     populetion: "10 миллионов", 
+// getCity(){ 
+//     return getObj(); 
+// }, 
+
+//    }; 
+// let city2={ 
+//     name:"ГородM", 
+//     populetion:1e6, 
+// getCity(){ 
+//     return getObj(); 
+// }, 
+
+// }; 
+// function GetName(){ 
+//     return this.name 
+
+// }; 
+// city1.GetName=GetName; 
+// city2.GetName=GetName; 
+
+// console.log(city1.GetName()) 
+// console.log(city2.GetName()) 
+
+// function ExportStr(){ 
+//     return name=${this.name}\npopulation=${this.populetion}\n; 
+//     }; 
+// city1.ExportStr=ExportStr; 
+// city2.ExportStr=ExportStr; 
+// console.log(city1.ExportStr()) 
+// console.log(city2.ExportStr()) 
+
+// // function GetObj(){ 
+// //     return this; 
+// // }; 
+// // city1.getcity=GetObj; 
+// // city2.getcity=GetObj; 
+// // console.log(city1.GetObj()); 
+
+// function getObj(){ 
+//     return this; 
+// }
+
+// function getObj() {
+//   return this;
+// };
 
 
 // let city1 = {
-//     name: "ivan",
-//     surname: "kozlov",
-//     showinfo(){
-//         console.log('${city1.name}, ${city1.surname}');
-//     }
-// }
-// city1.showinfo();
+//   name: '«ГородN»',
+//   population: 10e6,
+//   getName() {
+//     return this.name
+//   },
+//   exportStr() {
+//     return `name; ${ГородN}\npopulation: ${10000000}\n»`
+//   },
+//   getCity () {
+//     return getObj()
+//   }
 
-
-// let city2 = city1.fullname();
-// console.log(city2);
-
-// let city1 = {};
-// city1.name = "ГородN";
-// city1.population = 10000000;
-// let city2 = {
-//     name: "ГородM",
-//     population: 1e6
 // };
- 
-// function getName() { return this.name; }
-// city1.getName = getName;
-// city2.getName = getName;
- 
-// function exportStr() { return `name=${this.name}\npopulation=${this.population}\n`; }
-// city1.exportStr = exportStr;
-// city2.exportStr = exportStr;
- 
-// function getObj() { return this; }
-// function getCity() { return getObj.apply(this).getName(); }
- 
-// city1.getCity = getCity;
-// city2.getCity = getCity;
- 
-// // Тестирование
-// console.log(city1.exportStr());
-// console.log(city2.exportStr());
-// console.log(city1.getCity());
-// console.log(city2.getCity());
 
+// let city2 = {
+//   name: '«ГородN»',
+//   population: 10e6,
+//   getName() {
+//     return this.name
+//   },
+//   exportStr() {
+//     return `name; ${ГородN}\npopulation: ${10000000}\n»`
+//   },
+// };
+// city1.name = getName;
+// city2.getName = getName;
+// console.log(city1.getName());
 
 
 //Cоздать объект obj, с методами method1(), method2() и method3(). В методе method3() 
 //должна возвращаться строка «метод3». 
 //Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3().
-// let obj = {
-//     method1: function method1() {
-        
+// const obj = {
+//     method1: function() {
+//         return this;
 //     },
-//     method2: function method2() {
-        
+//     method2: function () {
+//       return this; 
 //     },
-//     method3: function method3() {
-//         console.log("метод 3");;
+//     method3: function() {
+//         return `«метод3»`;
 //     },
 
 // };
-// obj.method1().method2().method3();
+// console.log (obj.method1().method2().method3());
 
 //Создайте структуру с именем train, 
 //содержащую поля: название пункта назначения, номер поезда, время отправления.
@@ -381,10 +455,71 @@
 // Добавить возможность сортировки массив по пункту назначения, 
 //причем поезда с одинаковыми пунктами назначения должны быть 
 //упорядочены по времени отправления.
-let train = {
-  punkt: "",
-  nomer: "",
-  time: "",
-};
-let arr =[train, train, train, train, train];
-console.log(arr);
+
+
+// function Train(name, punkt, number, time,) {
+//   this.name = name;
+//   this.punkt = punkt;
+//   this.number = number;
+//   this.time = time;
+//   this.showInfoAboutTrain= function() {
+//       return `name:${this.name} \ npunkt: ${this.punkt}\nTime: ${this.time}`
+//     };
+
+// }
+// const train1 = new Train("скоростной", "Brest", 356, 15.45)
+// const train2 = new Train("скоростной", "Минск", 756, 11.45)
+// const train3 = new Train("купе", "Питер", 789, 18.45)
+// const train4 = new Train("плацкарт", "Москва", 777, 15.00)
+// const train5 = new Train("скоростной", 'Brest', 785, 22.45)
+// const train6 = new Train("купе", 'Pinsk', 552, 15.03)
+// let vseTrain = [train1, train2, train3, train4, train5];
+// vseTrain = vseTrain.sort((train1, train2) => {
+//   if (train1.number > train2.number) {
+//       return 1;
+//   }
+//   if (train1.number < train2.number) {
+//       return -1;
+//   }
+//   if (train1.number == train2.number) {
+//       return 0;
+//   }
+// });
+// console.log(vseTrain);
+// let n=prompt('введите номер поезда, для получения информации');
+// const findTrains =  vseTrain.find(train1 => train1.number == n)?.showInfoAboutTrain() ?? 'not found!';  
+// console.log(findTrains);
+
+
+
+// сколкько уникальных чисел содержиться 
+// сколько повторяющихся
+
+// let arr = [1,2,3,5,5,5,5,5,8,6,3,8,7,4,5,];
+// let unicum = new Set(arr);
+// console.log(unicum.size);
+// console.log(arr.length-unicum.size); //не правильно считает
+
+// Описать объект пердоставляющий треугольник
+// 
+
+// 13/06/2022
+
+// function Treugolnik(a, b, c, ) {
+//   this.a = a;
+//   this.b = b;
+//   this.c = c;
+//   this.istreangle = function(){
+//     return !!this.a && !!this.b && !!this.b && this.a+this.b>this.c;
+//   }
+//   Object.defineProperty(this, 'perimetr',{
+//     get: function(){
+//       return this.a + this.b + this.c
+//     },
+//     configurable: true
+//   })
+// };
+// const triangl = new Treugolnik(10,1,7); // создал новую const в которую положил конструктор
+
+// console.log(triangl.istreangle());
+// console.log(triangl.perimetr);
