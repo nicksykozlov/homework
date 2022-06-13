@@ -39,7 +39,7 @@
 
 
 
-//  \
+// let arr = ['w', 'y', 'k', 'o', 'p', 'i', 'b'];
 
 // let ArrNew = arrNew.concat(arr);
 
@@ -47,21 +47,66 @@
 
 
 //EVERY
+//можно через функцию можно через новую переменную
+
+// let arr = [15,16,15,16,15,12,];
+// let newarr = arr.every(s => s<=10);
 // function big(element) {
 //     return element >=10;
-<<<<<<< HEAD
     
 // }
-// let arr = [14, 14, 14, 15].every(elem => elem >=10);
-// // let num = arr.every(elem => elem >= 10);
-//     console.log(arr);
-=======
+// console.log(newarr);
 
-// // }
-// let arr = [14, 14, 14, 15].every(elem => elem >=10);
-// let num = arr.every(elem => elem >= 10);
+// entries нужен для того что разбить масив на ключ и значение 
+// вот так будет выглядить (2) [0, 15]
+// что бы вывести только for of либо console.log(Object.entries(arr));
+// let arr = [15,16,15,16,15,12,];
+// let newarr = arr.entries();
+
+// for(let ent of newarr){
+//     console.log(ent);
+// }
+
+// console.log(Object.entries(arr));
+
+
+// Array.prototype.fill()  заполняет все элементы массива от начального до конечного индексов одним значением.
+
+// let arr = [15,16,15,16,15,12,];
+// console.log(arr.fill(8, 0, 3 )); // первая цифра чем заполняем, вторая с какой позиции, третья до какой позиции
+
+ // Filter созадет новый масив с отфильтрованми элементами Для фильтра можно писать функции
+// let arr = [15,16,15,16,15,12,];
+// let newarr = arr.filter((elem, index) => index%2==0, );
+// console.log(newarr);
+
+
+// const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+// function isPrime(num) {    //num в данном случае это цифры из масива 
+//   for (let i = 2; num > i; i++) {  //пришло - 3 это сразу меньше счетчика сразу получим false
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+//   return num > 1;
+// }
+// console.log(isPrime(9)); // [2, 3, 5, 7, 11, 13]
+
+// function square(number) {
+//     return number * number;
+//   }
+
+// console.log(square(10));
+
+// Find find index для поиска первого занчения
+
+// const array = [-3, -2, -1, 0, 1, 2, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+// let arr = array.findIndex(item => item > 3 && item <= 4);
 // console.log(arr);
->>>>>>> 8a95406943b76a5b46c84380eb7b1a76e0e64130
+
+
+// git 
 
 //ДЗ 08.06
 // let str = 'Lorem ipsum123 dolor 121233 3,7 sit amet, co1nsec856989tetur adipis7cing elit, sed d6o eiusmod temp567or incid6idunt ut l65abore et123 dolore magn256a aliqua. Ut enim4 ad minim veniam, quis nostrud'
@@ -76,13 +121,14 @@
 // //     }
 //     console.log(num);
 //Найдите самое длинное слово в строке
-// str = 'Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco   laboris nisi ut aliquip ex ea commodo consequat. Duis aute    irure dolor in reprehenderit   in voluptate velit esse   cillum dolore eu fugiat nulla pariatur.    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+    // str = 'Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco   laboris nisi ut aliquip ex ea commodo consequat. Duis aute    irure dolor in reprehenderit   in voluptate velit esse   cillum dolore eu fugiat nulla pariatur.    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
 
-// let maxWord = str.split(' ').reduce( (word1, word2) => word1.length > word2.length ? word1 : word2);
+    // let maxWord = str.split(' ').reduce( (word1, word2) => word1.length > word2.length ? word1 : word2);
+    
+    // console.log(maxWord);
 
-// console.log(maxWord);
-
-// function Student(surname, inicial, grupa, ocenka) {
+    //8.06.2022
+    // function Student(surname, inicial, grupa, ocenka) {
 //     this.surname = surname;
 //     this.inicial = inicial;
 //     this.grupa = grupa;
@@ -119,21 +165,21 @@
 
 
 
-function Train(adres, numpoezd, time) {
-    this.adres = adres;
-    this.numpoezd = numpoezd;
-    this.time = time;
+// function Train(adres, numpoezd, time) {
+//     this.adres = adres;
+//     this.numpoezd = numpoezd;
+//     this.time = time;
   
-}
+// }
 
 
-const train1 = new Train('Vileyka', 135, 12.38);
-const train2 = new Train('Brest', 2, 12.49);
-const train3 = new Train('Grodno', 8, 12.28);
-const train4 = new Train('Minsk', 5, 12.38);
-const train5 = new Train('Vitebsk', 13, 12.18);
+// const train1 = new Train('Vileyka', 135, 12.38);
+// const train2 = new Train('Brest', 2, 12.49);
+// const train3 = new Train('Grodno', 8, 12.28);
+// const train4 = new Train('Minsk', 5, 12.38);
+// const train5 = new Train('Vitebsk', 13, 12.18);
 
-let poezd = [train1, train2, train3, train4, train5];
-poezd.sort((s1, s2);
+// let poezd = [train1, train2, train3, train4, train5];
+// poezd.sort((s1, s2);
 
-console.log(poezd);
+// console.log(poezd);
