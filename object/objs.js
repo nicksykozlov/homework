@@ -634,7 +634,7 @@
 //Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]].
 //Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
 
-// let arr = [[1, 2, 3 ], [8,[ 5, [15, 10, [10]]], 9, 10], [4, 5], [6]];
+// let arr = [[1, 2, 3 ], [8,[ 5, [15, 10, [10,[15]]]], 9, 10], [4, 5], [6]];
 // let sum = arr.flat(Infinity).reduce((a,b)=> a+b);
 // console.log(sum);
 
@@ -644,6 +644,37 @@
 //Создайте массив из 10 пользователей
 //Добавьте возможность вывода пользователей старше определенного возраста n, упорядоченых в алфовитном порядке в обратном направлении
 //Добавьте возможность удаления пользователей младше определенного возраста n
+// Решение домашки 
+// function User(firstName, lastName, year){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.year = year;
+//     Object.defineProperty(this, 'fullName', {
+//         get: () => { return this.firstName + ' ' + this.lastName},
+//     })
+//     Object.defineProperty(this, 'age', {
+//         get: () => { return 2022 - this.year},
+//     })
+// }
+ 
+// const user1 = new User('ivan1', 'pupkin1', 1981);
+// const user2 = new User('ivan2', 'pupkin2', 1982);
+// const user3 = new User('ivan3', 'pupkin3', 1983);
+// const user4 = new User('ivan4', 'pupkin4', 1984);
+// const user5 = new User('ivan5', 'pupkin5', 1985);
+// const users= [user1, user2, user3, user4, user5];
+// let n = 30;
+// const oldUser = users.filter( user  => user.age > n);
+// oldUser.sort( (u1, u2) => {
+//     if(u1.fullName > u2.fullName){
+//         return -1;
+//     } else if(u1.fullName < u2.fullName){
+//         return 1
+//     }
+//     return 0
+// })
+// console.log(oldUser);
+
 // function User(firstName, lastName, year) {
 //   this.firstName = firstName;
 //   this.lastName = lastName;
@@ -656,7 +687,7 @@
 //   });
 //   Object.defineProperty(this, "god", {
 //     get () {
-//       return (god = 2022 - this.age);  
+//       return 2022 - this.eyear;  
 //     },
 //   });
 
@@ -664,17 +695,11 @@
 
 // const user = new User("Ivan", "Petrov", 1981);
 
-// console.log(user);
+// console.log(user.god);
 // console.log(user.fulname);
 // // console.log(user.god); // хотел от 2022 отнять год рождения что быполучить количество лет
-
-let arr = new Array (10).fill('user');
-
-console.log(arr);  
-
-
-
-
+// let arr = new Array (10).fill('user');
+// console.log(arr);  
 // let user = {
 //   firstName: "Ivan",
 //   lastName: "Petrov",
