@@ -112,7 +112,6 @@
 
 // let newmenu ={};
 
-
 // function multiplyNumeric(obj) {
 //     for (let key in menu) {
 //       if (typeof obj[key] == 'number') {
@@ -132,7 +131,7 @@
 
 // console.log(user);
 
-// клонирвоание объектов 
+// клонирвоание объектов
 
 // let user = {
 //     name: "Иван",
@@ -172,7 +171,6 @@
 
 // let clone = Object.assign({}, user);
 // console.log(clone);
-
 
 // Метод this
 
@@ -268,7 +266,7 @@
 // alert( calculator.sum() );
 // alert( calculator.mul() );
 
-// New  конструктор объектов 
+// New  конструктор объектов
 
 // function User(name) {
 //     this.name = name;
@@ -291,114 +289,110 @@
 // возможна любая сложная логика и выражения
 // локальные переменные и т. д.
 
-
-//ДЗ 
+//ДЗ
 // 1
-// Создайте объект city1 (let city1 = {}), укажите у него свойства name (название города, строка) 
+// Создайте объект city1 (let city1 = {}), укажите у него свойства name (название города, строка)
 //со значением «ГородN» и population (населенность города, число) со значением 10 млн.
 // Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.
 // Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
-// Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в 
+// Создайте методы exportStr() у каждого из объектов. Этот метод должен возвращать информацию о городе в
 //формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями.
-// Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2 
+// Создайте глобальную функцию getObj(), которая возвращает this. А у каждого из объектов city1 или city2
 //метод getCity, который ссылается на getObj. Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 
-// let city1={ 
-//       name:"ГородN", 
-//       populetion: "10 миллионов", 
-//   getCity(){ 
-//       return getObj(); 
-//   }, 
+// let city1={
+//       name:"ГородN",
+//       populetion: "10 миллионов",
+//   getCity(){
+//       return getObj();
+//   },
 
-//      }; 
-//   let city2={ 
-//       name:"ГородM", 
-//       populetion:1e6, 
-//   getCity(){ 
-//       return getObj(); 
-//   }, 
+//      };
+//   let city2={
+//       name:"ГородM",
+//       populetion:1e6,
+//   getCity(){
+//       return getObj();
+//   },
 
-//   // }; 
-// function GetName(){ 
-//     return this.name 
+//   // };
+// function GetName(){
+//     return this.name
 
-// }; 
-// city1.GetName=GetName; 
-// city2.GetName=GetName; 
+// };
+// city1.GetName=GetName;
+// city2.GetName=GetName;
 
-// console.log(city1.GetName()) 
-// console.log(city2.GetName()) 
+// console.log(city1.GetName())
+// console.log(city2.GetName())
 
-// function ExportStr(){ 
-//     return name=${this.name}\npopulation=${this.populetion}\n; 
-//     }; 
-// city1.ExportStr=ExportStr; 
-// city2.ExportStr=ExportStr; 
-// console.log(city1.ExportStr()) 
-// console.log(city2.ExportStr()) 
+// function ExportStr(){
+//     return name=${this.name}\npopulation=${this.populetion}\n;
+//     };
+// city1.ExportStr=ExportStr;
+// city2.ExportStr=ExportStr;
+// console.log(city1.ExportStr())
+// console.log(city2.ExportStr())
 
-// // function GetObj(){ 
-// //     return this; 
-// // }; 
-// // city1.getcity=GetObj; 
-// // city2.getcity=GetObj; 
-// // console.log(city1.GetObj()); 
+// // function GetObj(){
+// //     return this;
+// // };
+// // city1.getcity=GetObj;
+// // city2.getcity=GetObj;
+// // console.log(city1.GetObj());
 
-// function getObj(){ 
-//     return this; 
+// function getObj(){
+//     return this;
 // }
 
+// let city1={
+//     name:"ГородN",
+//     populetion: "10 миллионов",
+// getCity(){
+//     return getObj();
+// },
 
+//    };
+// let city2={
+//     name:"ГородM",
+//     populetion:1e6,
+// getCity(){
+//     return getObj();
+// },
 
-// let city1={ 
-//     name:"ГородN", 
-//     populetion: "10 миллионов", 
-// getCity(){ 
-//     return getObj(); 
-// }, 
+// };
+// function GetName(){
+//     return this.name
 
-//    }; 
-// let city2={ 
-//     name:"ГородM", 
-//     populetion:1e6, 
-// getCity(){ 
-//     return getObj(); 
-// }, 
+// };
+// city1.GetName=GetName;
+// city2.GetName=GetName;
 
-// }; 
-// function GetName(){ 
-//     return this.name 
+// console.log(city1.GetName())
+// console.log(city2.GetName())
 
-// }; 
-// city1.GetName=GetName; 
-// city2.GetName=GetName; 
+// function ExportStr(){
+//     return name=${this.name}\npopulation=${this.populetion}\n;
+//     };
+// city1.ExportStr=ExportStr;
+// city2.ExportStr=ExportStr;
+// console.log(city1.ExportStr())
+// console.log(city2.ExportStr())
 
-// console.log(city1.GetName()) 
-// console.log(city2.GetName()) 
+// // function GetObj(){
+// //     return this;
+// // };
+// // city1.getcity=GetObj;
+// // city2.getcity=GetObj;
+// // console.log(city1.GetObj());
 
-// function ExportStr(){ 
-//     return name=${this.name}\npopulation=${this.populetion}\n; 
-//     }; 
-// city1.ExportStr=ExportStr; 
-// city2.ExportStr=ExportStr; 
-// console.log(city1.ExportStr()) 
-// console.log(city2.ExportStr()) 
-
-// // function GetObj(){ 
-// //     return this; 
-// // }; 
-// // city1.getcity=GetObj; 
-// // city2.getcity=GetObj; 
-// // console.log(city1.GetObj()); 
-
-// function getObj(){ 
-//     return this; 
+// function getObj(){
+//     return this;
 // }
 
 // function getObj() {
 //   return this;
 // };
-
 
 // let city1 = {
 //   name: '«ГородN»',
@@ -429,16 +423,15 @@
 // city2.getName = getName;
 // console.log(city1.getName());
 
-
-//Cоздать объект obj, с методами method1(), method2() и method3(). В методе method3() 
-//должна возвращаться строка «метод3». 
+//Cоздать объект obj, с методами method1(), method2() и method3(). В методе method3()
+//должна возвращаться строка «метод3».
 //Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3().
 // const obj = {
 //     method1: function() {
 //         return this;
 //     },
 //     method2: function () {
-//       return this; 
+//       return this;
 //     },
 //     method3: function() {
 //         return `«метод3»`;
@@ -447,15 +440,14 @@
 // };
 // console.log (obj.method1().method2().method3());
 
-//Создайте структуру с именем train, 
+//Создайте структуру с именем train,
 //содержащую поля: название пункта назначения, номер поезда, время отправления.
-//Ввести данные в массив из пяти элементов типа train, 
-//упорядочить элементы по номерам поездов. 
+//Ввести данные в массив из пяти элементов типа train,
+//упорядочить элементы по номерам поездов.
 //Добавить возможность вывода информации о поезде, номер которого введен пользователем.
-// Добавить возможность сортировки массив по пункту назначения, 
-//причем поезда с одинаковыми пунктами назначения должны быть 
+// Добавить возможность сортировки массив по пункту назначения,
+//причем поезда с одинаковыми пунктами назначения должны быть
 //упорядочены по времени отправления.
-
 
 // function Train(name, punkt, number, time,) {
 //   this.name = name;
@@ -487,12 +479,10 @@
 // });
 // console.log(vseTrain);
 // let n=prompt('введите номер поезда, для получения информации');
-// const findTrains =  vseTrain.find(train1 => train1.number == n)?.showInfoAboutTrain() ?? 'not found!';  
+// const findTrains =  vseTrain.find(train1 => train1.number == n)?.showInfoAboutTrain() ?? 'not found!';
 // console.log(findTrains);
 
-
-
-// сколкько уникальных чисел содержиться 
+// сколкько уникальных чисел содержиться
 // сколько повторяющихся
 
 // let arr = [1,2,3,5,5,5,5,5,8,6,3,8,7,4,5,];
@@ -501,7 +491,7 @@
 // console.log(arr.length-unicum.size); //не правильно считает
 
 // Описать объект пердоставляющий треугольник
-// 
+//
 
 // 13/06/2022
 
@@ -523,3 +513,208 @@
 
 // console.log(triangl.istreangle());
 // console.log(triangl.perimetr);
+
+// дз
+
+// Object.entries(user) - вызовет пару ключ значение
+// Object.values(user) - вызовет значение
+// Object.keys(user) - вызовет ключ
+// let user = {
+//     name: "John",
+//     age: 30
+//   };
+
+//   console.log(Object.keys(user));
+
+// Например, у нас есть объект с ценами, и мы хотели бы их удвоить:
+// Object.fromEntries - преобразовывает обратно в объект
+// let prices = {
+//     banana: 1,
+//     orange: 2,
+//     meat: 4,
+//   };
+
+//   let doublePrices = Object.fromEntries(
+//     // преобразовать в массив, затем map, затем fromEntries обратно объект
+//     Object.entries(prices).map(([a, b]) => [a, b * 2])
+//   );
+
+//   alert(doublePrices.meat); // 8
+
+//Есть объект salaries с произвольным количеством свойств, содержащих заработные платы.
+//Напишите функцию sumSalaries(salaries), которая возвращает сумму
+//всех зарплат с помощью метода Object.values и цикла for..of.
+//Если объект salaries пуст, то результат должен быть 0.
+// let salaries = {
+//   John: 100,
+//   Pete: 400,
+//   Mary: 250,
+// };
+// let descriptor = Object.getOwnPropertyDescriptor(salaries, John);
+//  console.log(descriptor);
+// function sumSalaries(salaries) {
+//   let sum = 0;
+//   for (let salary of Object.values(salaries)) {
+//     sum += salary;
+//   }
+//   return sum;
+// }
+//
+// function sumSalaries(salaries) { // value берет значение
+//     return Object.values(salaries).reduce((a, b) => a + b) // 650
+//   };
+//   console.log(sumSalaries(salaries));
+
+//Деструктуризация массива
+
+//у нас есть массив с именем и фамилией
+// let arr = ["Ilya", "Kantor", "vagon", "porovoz"]
+// let [firstName, surname, ...ost] = arr;
+// alert(firstName);
+// alert(surname);
+// alert(...ost );
+// alert([...ost]);// остаточный параметр делает масив поэтому надо в квадратные скобки
+
+//Цикл с .entries()
+//В предыдущей главе мы видели метод Object.entries(obj).
+//Мы можем использовать его с деструктуризацией для цикличного перебора ключей и значений объекта:
+
+// let user = {
+//   name: "John",
+//   age: 30
+// };
+
+// // цикл по ключам и значениям
+// for (let [key, value] of Object.entries(user)) {
+//   alert(`${key}:${value}`); // name:John, затем age:30
+// }
+
+// prompt запустится только для surname
+// let [name = prompt('name?'), surname = prompt('surname?')] = ["Julius", "ivan"];
+
+// alert(name);    // Julius (из массива)
+// alert(surname); // результат prompt
+
+// let options = {
+//     title: "Menu"
+//   };
+
+//   let {width = prompt("width?"), title = prompt("title?")} = options;
+
+//   alert(title);  // Menu
+//   alert(width);  // (результат prompt)
+
+// let options = {
+//     size: {
+//       width: 100,
+//       height: 200
+//     },
+//     items: ["Cake", "Donut"],
+//     extra: true
+//   };
+
+//   // деструктуризация разбита на несколько строк для ясности
+//   let {
+//     size: { // положим size сюда
+//       width,
+//       height
+//     },
+//     items: [item1, item2], // добавим элементы к items
+//     title = "Menu" // отсутствует в объекте (используется значение по умолчанию)
+//   } = options;
+
+//   alert(title);  // Menu
+//   alert(width);  // 100
+//   alert(height); // 200
+//   alert(item1);  // Cake
+//   alert(item2);  // Donut
+
+// ДЗ 15.06
+
+//Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]].
+//Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+
+// let arr = [[1, 2, 3 ], [8,[ 5, [15, 10, [10]]], 9, 10], [4, 5], [6]];
+// let sum = arr.flat(Infinity).reduce((a,b)=> a+b);
+// console.log(sum);
+
+//Создайте объект User c полями firstName, lastName, year(год рождения)
+//Реализуйте геттер, который возвращает полное имя пользователя
+//Реализутей геттер age на основе года рождения пользователя
+//Создайте массив из 10 пользователей
+//Добавьте возможность вывода пользователей старше определенного возраста n, упорядоченых в алфовитном порядке в обратном направлении
+//Добавьте возможность удаления пользователей младше определенного возраста n
+// function User(firstName, lastName, year) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.year = year;
+ 
+//   Object.defineProperty(this, "fulname", {
+//     get () {
+//       return `${firstName} ${lastName}`;
+//     },
+//   });
+//   Object.defineProperty(this, "god", {
+//     get () {
+//       return (god = 2022 - this.age);  
+//     },
+//   });
+
+// }
+
+// const user = new User("Ivan", "Petrov", 1981);
+
+// console.log(user);
+// console.log(user.fulname);
+// // console.log(user.god); // хотел от 2022 отнять год рождения что быполучить количество лет
+
+let arr = new Array (10).fill('user');
+
+console.log(arr);  
+
+
+
+
+// let user = {
+//   firstName: "Ivan",
+//   lastName: "Petrov",
+//   year: 30,
+// };
+// let descriptor = Object.getOwnPropertyDescriptor(user, 'firstName'); // метод посмотреть все атрибуты свойтсва
+// let ndescriptor = Object.defineProperty(user, 'lastName',{
+//     value: "John"
+//   });// defineproprty изменяет значения свойтсва
+// console.log(descriptor);
+// console.log(user);
+//окончание дз 15.06
+//Геттеры и сеттеры
+
+// let user = {
+//     name: "John",
+//     surname: "Smith",
+
+//     get fullName() {
+//       return `${this.name} ${this.surname}`;
+//     }
+//   };
+
+//   alert(user.fullName); // John Smith
+
+// let user = {
+//     name: "John",
+//     surname: "Smith",
+
+//     get fullName() {
+//       return `${this.name} ${this.surname}`;
+//     },
+
+//     set fullName(value) {
+//       [this.name, this.surname] = value.split(" ");
+//     }
+//   };
+
+//   // set fullName запустится с данным значением
+//   user.fullName = "Alice Cooper";
+
+//   alert(user.surname); // Alice
+//   alert(user.surname); // Cooper
