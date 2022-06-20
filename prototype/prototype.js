@@ -114,7 +114,7 @@
 
 // const obj = Object.assign(shape, rectangle, circle);
 // const arr = Object.entries(obj); //Создать массив содержащий эти фигуры.
- ////В цикле нарисовать их (вызвать метод draw).
+ //В цикле нарисовать их (вызвать метод draw).
 
 
 
@@ -164,8 +164,8 @@
 // }
 // console.log(getScholarship(student));
 
-//Создать метод getScholarship() для Student, который возвращает сумму стипендии.
-//Если средняя оценка студента больше или равна 5, то сумма 100, иначе 80.
+// Создать метод getScholarship() для Student, который возвращает сумму стипендии.
+// Если средняя оценка студента больше или равна 5, то сумма 100, иначе 80.
 
 // let o = {
 //     name: "Alice",
@@ -179,14 +179,14 @@
 // o.speak();//вызов функции
 
 // Это функция-конструктор, которая описывает тип объекта, а потому именуется с прописной буквы
-function Student(firstName, lastName, group, averageMark) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.group = group;
-      this.averageMark = averageMark;
-      speak(){
-        console.log('Hi i Am' + firtsname);
-      };
-    };
-const arr = new Student ('Ivan', 'Petrov', 15, 10);
-console.log(arr);    
+// function Student(firstName, lastName, group, averageMark) {
+//       this.firstName = firstName;
+//       this.lastName = lastName;
+//       this.group = group;
+//       this.averageMark = averageMark;
+//       speak(){
+//         console.log('Hi i Am' + firtsname);
+//       };
+//     };
+// const arr = new Student ('Ivan', 'Petrov', 15, 10);
+// console.log(arr);    
