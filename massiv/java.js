@@ -265,3 +265,38 @@
 
 // let first = str.split(' ').map(w=>w[0]);
 // console.log(first);
+
+
+///// МЕТОДЫ МАССИВОВО
+
+// FOR EACH
+const people = [
+    {name: 'Ivan', surName: 'Petrov', age: 45, zp: 248},
+    {name: 'Petro', surName: 'Zyglo', age: 32, zp: 100},
+    {name: 'Nick', surName: 'Yasykevic', age: 12, zp: 50},
+    {name: 'Gleb', surName: 'Ninntendo', age: 2, zp: 300},
+    {name: 'Roma', surName: 'PetrIvanov', age: 1, zp: 12},
+];
+// people.forEach(i => console.log(i));// переберет весь масив как For Of
+
+//MAP
+// const newpeple = people.map(i => i.age > 18); // новый масив 
+// есди прописывать условия как выше то выдаст true, где верно, False - неверно
+// что быполучить новый масив по условиям надо использовать filter
+// console.log(newpeple);
+
+//Filter
+// const adults = people.filter(i => i.age < 18)//нов масив в котором удовлетварены услОВИЯ ФИЛЬТР
+// for (let i = 0; i < people.length; i++){
+//     if (people[i].age >= 18){
+//         adults.push(people[i]);
+//     }
+// };
+// console.log(adults);
+
+// // Reduse
+// let sum = 0;
+// for (let i = 0; i < people.length; i++){
+//     sum += people[i].zp;
+// };
+// console.log(sum);
