@@ -15,17 +15,17 @@
 // Закрасьте все div у которых только 1 дочерний элемент желтым
 // Закрасьте все div у которых больше 2 дочерних элементов серым
 
-const divElement = document.body.querySelectorAll("div");
-divElement.forEach ((div) => {
-  if (div.children.length === 0) {
-    div.style.background = "blue";
-  }
-  if (div.children.length ===1) {
-    div.style.background = "yellow";
-  }
-  if (div.children.length === 2) {
-    div.style.background = "grey";
-  }
-});
+// const divElement = document.body.querySelectorAll("div");
+// divElement.forEach ((div) => {
+//   if (div.children.length === 0) {
+//     div.style.background = "blue";
+//   }
+//   if (div.children.length ===1) {
+//     div.style.background = "yellow";
+//   }
+//   if (div.children.length === 2) {
+//     div.style.background = "grey";
+//   }
+// });
 
 

@@ -101,3 +101,113 @@
   
 //  })
 //  console.log(pdel);
+
+
+////D O M
+
+// const windowWidth = window.innerWidth;
+// console.log(`Ширина окна ${windowWidth}`); // ширина окна браузера 
+
+// console.log(navigator.userAgent); // данные об операционной системе 
+// получить название браузера
+// if (navigator.userAgent.includes('Chrome')){ 
+//     console.log("браузер Хром");
+// }
+// if (navigator.userAgent.includes('Firefox')){
+//     console.log("браузер Firefox");
+// }
+
+// const elem = document.documentElement; // получить доступ к элементу html
+// console.log(elem);
+
+// const elem = document.body.childNodes; // получить доступ к непосредственным детям. элементы первого уровня вложенности
+// console.log(elem);
+// const node = document.body.nextSibling //parentNode previousSibling nextSibling
+// console.log(node);
+
+// Children firstElementChild lastElementChild - навигация по тегам 
+// const node = document.body.lastElementChild //parentNode previousSibling nextSibling
+// console.log(node);
+
+//querySelectorAll можно переберать через  forEach
+// const li = document.body.querySelectorAll('li');
+// // console.log(li[5]); // выведит 5 элемент
+// li.forEach(li => {
+//     console.log(li);
+// })
+
+// Closest - ищет ближайшего родителя с низу вверх по ирархии
+// const div = document.querySelector ('.first');
+// const first = div.closest ('.one')
+// console.log(div);
+
+//Inner Html - содержание  outerHTML -добавляет тег и содержание 
+// const p = document.querySelector("h1");
+// const b = p.outerHTML;
+// // p.innerHTML = `<h1>${b}</h1> <h2>Ох уж этот сосед</h2> <p class = "red">обормот</p>`;
+// console.log(b);
+
+
+// createElement создает тег в который моно через Inner Html добавить теги
+// creaTextNode ("Privet") создает текстовую ноду
+// вставка before - перед элементом, after - после, prepend - вставляет внутрь вначло append - внутрь в конец
+// const element = document.body.querySelector('div');
+// const newElement = document.createElement('div');
+// newElement.innerHTML = `<h1>Гуляй</h1> <h2>Ох уж этот сосед</h2> <p class = "red">обормот</p>`
+// element.before(newElement)
+// console.log(element);
+
+// insertAdjacentHTML /Text - вставит текст/ Element - вставит элемент
+//beforebegin - перде div вначаде afterend - после див в конце
+// beforeend - внутри в конце afterbegin - внутрь вначало
+// const newElement = document.querySelector('div');
+// newElement.insertAdjacentHTML(
+//     'beforeend',
+//     `<h3>РАБОТАЕТ</h3>`,
+// );
+// console.log(newElement);
+
+// CloneNode - клаирование объектов. Если надо и содержимое то в скобках (true)
+// const newElement = document.querySelector('div');
+// const clone = newElement.cloneNode(true);
+// newElement.prepend(clone)
+// console.log(clone);
+
+// remove - удаление объекта 
+// const newElement = document.querySelector('div');
+// newElement.remove()
+
+// className  можно искать и потом перемеиновать
+// const cls = document.querySelectorAll('.small');
+// cls.className = "blue"
+// console.log(cls);
+
+// classList
+// const cls = document.querySelector('.small'); // почему не добавляет если искать по ALL
+// cls.classList.add('active')
+// console.log(cls);
+
+//style - добавление стилийЮ Если хотим сбросить CSS свойство то надо присвоить пустую строку
+
+// const cls = document.querySelector('.first');
+// cls.style.cssText = ` // обязатльно кривые кавычки 
+// color: red;
+// border: solid 10px red;
+// `
+
+//getComputedStyle - метод для получения стилей. Работает только для чтения свойства 
+// const cls =document.querySelector('div');
+// const style = getComputedStyle(cls);
+// console.log(style.fontSize);
+// const cls =document.querySelector('div');
+// const style = getComputedStyle(cls, '::before');
+// console.log(style.backgroundColor);
+
+// получить свойства эдемента можно при помощи dir
+// const link= document.querySelector('li');
+// console.dir(link);
+
+//hasAtrribute, getAttribute, removeAttribute
+
+
+
