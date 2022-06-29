@@ -159,17 +159,17 @@
 
 
 // 27/06/2022
-// const button = document.querySelector('button')
-// const ul = document.querySelector('ul')
-// let n = 1;
-// button.addEventListener("click", create);
+const button = document.querySelector('button')
+const ul = document.querySelector('ul')
+let n = 1;
+button.addEventListener("click", create);
 
-// function create() {
-//     const li = document.createElement('li');
-//     li.textContent = n;
-//     n++;
-//     ul.append(li);
-// };
+function create() {
+    const li = document.createElement('li');
+    li.textContent = n;
+    n++;
+    ul.append(li);
+};
 // ul.addEventListener('contextmenu', (e) => {
 //     k.preventDefault()
 
