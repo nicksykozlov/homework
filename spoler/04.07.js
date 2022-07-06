@@ -3,7 +3,7 @@
 // let select = document.body.querySelector ('select')
 // button.addEventListener('click', (e) =>{
 //         select.selectedIndex = Number.parseInt(input.value) ;
-                
+
 //     });
 
 // console.log(select);
@@ -119,16 +119,82 @@
 // Дана кнопка 
 // по нажатию на эту кнопку циклом переберите все формы на странице
 // затем циклом переберите все инпуты в каждой форме и найдите сумму чисел всех инпутов
-const numbers = [];
-const forms = Array.from(documents.forms);
+// const numbers = [];
+// const forms = Array.from(documents.forms);
 
-document.querySelector('button').addEventListener('click', ()=>{
-    forms.forEach(form => {
-        const inputs = Array.from(form.elements);
-        numbers.push(...inputs.map(input => Number.parseInt(input.value)))
-    });
-    const summa = numbers.reduce((acc, n)=> acc+n, 0)
-    alert(summa)
-})
-button.addEventListener()
+// document.querySelector('button').addEventListener('click', ()=>{
+//     forms.forEach(form => {
+//         const inputs = Array.from(form.elements);
+//         numbers.push(...inputs.map(input => Number.parseInt(input.value)))
+//     });
+//     const summa = numbers.reduce((acc, n)=> acc+n, 0)
+//     alert(summa)
+// })
+// button.addEventListener()
 
+
+//06/07//
+// const form = document.forms[0];
+// form.addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     const err = [];
+//     const name = this.elements.name;
+//     if (name.value.length < 5) {
+//         err.push('поле name должно быть 5 символов')
+
+//     }
+    
+    
+
+//     const age = this.elements.age;
+//     if (age.value.includes(' ')) {
+//         err.push('поле age должно не содержать пробелов')
+//     }
+//     if (!Number(age.value)){
+//         err.push('поле age должно только цифры')
+//     } else if (Number(age.value) < 18) {
+//         err.push('поле age должно , быть тольк больше 18')
+//     }
+
+//     const pasword = this.elements.pasword;
+//     const confirm = this.elements.confirmpasword;
+//     if(pasword.value!==confirm.value){
+//         err.push('пароли не совпадают')
+//     }
+
+//     const checkbox = this.elements.remember
+//     if(!remember.checked){
+//         err.push('чек не выбран')
+
+//     }
+   
+//     const ul = document.querySelector('ul');
+//     ul.innerHTML = '';
+//     const list = err.map(err => {
+//         const li = document.createElement('li');
+//         li.textContent = err
+//         return li;
+//     })
+
+//     ul.append(...list);
+
+// })
+// сдеалть функцию при котрой при наведении мыши меняется цвут
+for(let i = 0; i<1000; i++){
+    const div = document.createElement('div');
+    document.body.append(div)
+}
+function getRandomColor(){
+    const r = Math.floor(Math.random()*255);
+    const g = Math.floor(Math.random()*255);
+    const b = Math.floor(Math.random()*255);
+    return `rgb(${r}, ${g}, ${b})`
+}
+document.body.addEventListener('mousemove', function (event){
+    if(event.target.tagName === "DIV"){
+        event.target.style.backgroundColor = getRandomColor()
+    }
+    else{
+        event.relatedTarget.style.backgroundColor = 'white'
+    }
+});
