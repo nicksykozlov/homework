@@ -57,7 +57,7 @@ document.querySelector(".button").addEventListener("click", (event) => {
     if (b === "") b = a; // для того что бы считать 5+= получиться 10
     switch (sign) {
       case "+":
-        a = +a + +b;
+        a = (+a) + (+b);
         break;
 
       case "-":

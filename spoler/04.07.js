@@ -179,22 +179,22 @@
 //     ul.append(...list);
 
 // })
-// сдеалть функцию при котрой при наведении мыши меняется цвут
-for(let i = 0; i<1000; i++){
-    const div = document.createElement('div');
-    document.body.append(div)
-}
-function getRandomColor(){
-    const r = Math.floor(Math.random()*255);
-    const g = Math.floor(Math.random()*255);
-    const b = Math.floor(Math.random()*255);
-    return `rgb(${r}, ${g}, ${b})`
-}
-document.body.addEventListener('mousemove', function (event){
-    if(event.target.tagName === "DIV"){
-        event.target.style.backgroundColor = getRandomColor()
-    }
-    else{
-        event.relatedTarget.style.backgroundColor = 'white'
-    }
-});
+// // сдеалть функцию при котрой при наведении мыши меняется цвут
+// for(let i = 0; i<1000; i++){
+//     const div = document.createElement('div');
+//     document.body.append(div)
+// }
+// function getRandomColor(){
+//     const r = Math.floor(Math.random()*255);
+//     const g = Math.floor(Math.random()*255);
+//     const b = Math.floor(Math.random()*255);
+//     return `rgb(${r}, ${g}, ${b})`
+// }
+// document.body.addEventListener('mousemove', function (event){
+//     if(event.target.tagName === "DIV"){
+//         event.target.style.backgroundColor = getRandomColor()
+//     }
+//     else{
+//         event.relatedTarget.style.backgroundColor = 'white'
+//     }
+// });
