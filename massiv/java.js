@@ -300,3 +300,18 @@ const people = [
 //     sum += people[i].zp;
 // };
 // console.log(sum);
+
+
+// let a = [1,2,3,4 [6,8], 10];
+// let b = [0,9,8[4,4[2,3]],4];
+// let c = a.concat(b);
+// console.log(c);
+/* <select id="select" multiple>
+  <option value="blues" selected>Блюз</option>
+  <option value="rock" selected>Рок</option>
+  <option value="classic">Классика</option>
+</select> */
+// let a = Array.from(select.options).filter(option =>option.selected).map(option=>option.value);
+// console.log(a);
+ let a = new Option ("nhhn", "sdsd");
+ console.log(a);
