@@ -270,13 +270,13 @@
 ///// МЕТОДЫ МАССИВОВО
 
 // FOR EACH
-const people = [
-    {name: 'Ivan', surName: 'Petrov', age: 45, zp: 248},
-    {name: 'Petro', surName: 'Zyglo', age: 32, zp: 100},
-    {name: 'Nick', surName: 'Yasykevic', age: 12, zp: 50},
-    {name: 'Gleb', surName: 'Ninntendo', age: 2, zp: 300},
-    {name: 'Roma', surName: 'PetrIvanov', age: 1, zp: 12},
-];
+// const people = [
+//     {name: 'Ivan', surName: 'Petrov', age: 45, zp: 248},
+//     {name: 'Petro', surName: 'Zyglo', age: 32, zp: 100},
+//     {name: 'Nick', surName: 'Yasykevic', age: 12, zp: 50},
+//     {name: 'Gleb', surName: 'Ninntendo', age: 2, zp: 300},
+//     {name: 'Roma', surName: 'PetrIvanov', age: 1, zp: 12},
+// ];
 // people.forEach(i => console.log(i));// переберет весь масив как For Of
 
 //MAP
@@ -313,5 +313,94 @@ const people = [
 </select> */
 // let a = Array.from(select.options).filter(option =>option.selected).map(option=>option.value);
 // console.log(a);
- let a = new Option ("nhhn", "sdsd");
- console.log(a);
+//  let a = new Option ("nhhn", "sdsd");
+//  console.log(a);
+
+
+
+//Проверить массив является ли возврастающим либо убывающим
+
+// let arr = [1,2,3,4,5,6];
+// let newarr = arr.sort((a,b)=> a-b);
+// console.log(newarr);
+// for (let i = 0; i < arr.length; i++){
+//     if (arr[i]<arr[i+1]){
+//         console.log('вовзрастающий');
+//         break;        ;
+//     }
+//     else{
+//         console.log("убывающий");
+//     }
+// };
+
+
+// В данном массиве найти два наименших элемента 
+// let arr = [1,2,9,5,5,6,7];
+// let newarr = arr.sort((a,b)=> a-b);
+// let min = `${newarr[0]} и ${newarr[1]}`;
+// console.log(min);
+
+// Определить есть ли в масииве повторяющие элемнты 
+
+// let arr = [2, 4, 7, 1, 11, 5, 6, 3, 10];
+// let isDublicate = false;
+// while(arr.length){
+//     let element = arr.pop();
+//     if(arr.includes(element)){
+//         isDublicate=true;
+//         break;
+//     }
+// }
+// console.log(isDublicate);
+
+// Календарь
+
+
+function createCalendar(elem, year, month) {
+
+  let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+  let d = new Date(year, mon);
+
+  let table = '<table><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr>';
+
+  // пробелы для первого ряда
+  // с понедельника до первого дня месяца
+  // * * * 1  2  3  4
+  for (let i = 0; i < getDay(d); i++) {
+    table += '<td></td>';
+  }
+
+  // <td> ячейки календаря с датами
+  while (d.getMonth() == mon) {
+    table += '<td>' + d.getDate() + '</td>';
+
+    if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
+      table += '</tr><tr>';
+    }
+
+    d.setDate(d.getDate() + 1);
+  }
+
+  // добить таблицу пустыми ячейками, если нужно
+  // 29 30 31 * * * *
+  if (getDay(d) != 0) {
+    for (let i = getDay(d); i < 7; i++) {
+      table += '<td></td>';
+    }
+  }
+
+  // закрыть таблицу
+  table += '</tr></table>';
+
+  elem.innerHTML = table;
+}
+
+function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
+  let day = date.getDay();
+  if (day == 0) day = 7; // сделать воскресенье (0) последним днем
+  return day - 1;
+}
+
+createCalendar(calendar, 2022, 1);
+createCalendar(calendar, 2022, 2);
+createCalendar(calendar, 2022, 3);

@@ -28,10 +28,10 @@
 // b = toLocaleDateString('Ru-ru', {weekday: 'long'});
 // console.log(b); //должен поучиться понедельник
 
-// сколько осталось док окнца дня js
-let data = Date.now();
-let end = new Date('August 03, 2021 00:00:00').getTime()
-let finish = (data - end) / (1000*60*60);
-console.log(data);
-console.log(end);
-console.log(finish);
+// // сколько осталось док окнца дня js
+// let data = Date.now();
+// let end = new Date('August 03, 2021 00:00:00').getTime()
+// let finish = (data - end) / (1000*60*60);
+// console.log(data);
+// console.log(end);
+// console.log(finish);
