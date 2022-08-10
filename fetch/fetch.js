@@ -1,0 +1,1 @@
+let promise = fetch(https://dummyjson.com/users)

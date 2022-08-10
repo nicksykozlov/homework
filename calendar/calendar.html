@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+        width: 1500px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .container div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container div ul {
+        list-style: none;
+        display: grid;
+        width: 360px;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    li:nth-child(7n){
+        color: red;
+    }
+   .green{
+    color: red;
+   }
+</style>
+</head>
+<body>
+    <div class="container">
+ 
+    </div>
+    <script src="./calendar.js"></script>
+</body>
+</html>

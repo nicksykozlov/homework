@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <label for="select">Per page:</label>
+    <select class="per-page" id="select">
+        <option selected>30</option>
+        <option>40</option>
+        <option>50</option>
+        <option>100</option>
+    </select>
+    <label for="search">Search:</label>
+    <input type="search" name="" id="search">
+</div>
+<div class="row">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <table class="table">
+    </table>
+</div>
+<div class="row">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous" data-page="first">
+                    <span aria-hidden="true">First</span>
+                </a>
+            </li>
+            <li class="page-item previous">
+                <a class="page-link" href="#" aria-label="Previous" data-page="previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" data-page="next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" data-page="last">
+                    <span aria-hidden="true">Last</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+<script>
+    let perPage = 30;
+    let page = 1;
+    let pageCount;
+    let total;
+
+    function renderPagination() {
+        const previousLi = document.body.querySelector('.previous');
+        for (let i = pageCount; i > 0; i--) {
+            previousLi.insertAdjacentHTML(
+                'afterend',
+                `<li class="page-item"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`
+            )
+        }
+    }
+
+    document.body.querySelector('.pagination').addEventListener('click',function (event){
+        if(event.target.tagName === 'A'){
+            event.preventDefault();
+            page = event.target.dataset.page;
+            loadData();
+        }
+    })
+    document.body.querySelector('select.per-page')
+        .addEventListener('input', function () {
+            perPage = Number.parseInt(this.value);
+            loadData();
+        })
+    document.body.querySelector('input#search')
+        .addEventListener('input', function () {
+            const text = this.value;
+            const users = allUsers.filter(user => Object.values(user)
+                .filter(o => typeof (o) !== 'object')
+                .some(property => {
+                    property = '' + property;
+                    console.log(text)
+                    return property.includes(text);
+                }))
+            console.log(users);
+            renderTable(users ? users : []);
+        })
+
+    function showSpinner(display) {
+        const spinner = document.body.querySelector('.spinner-border');
+        const table = document.body.querySelector('table');
+        spinner.hidden = !display;
+        table.hidden = display;
+
+    }
+
+    function createListByObject(object) {
+        const ul = document.createElement('ul');
+        for (const property in object) {
+            const li = document.createElement('li');
+            if (typeof (object[property]) === "object") {
+                li.append(createListByObject(object[property]))
+            } else {
+                li.textContent = object[property];
+            }
+            ul.append(li);
+        }
+        return ul;
+    }
+
+    let allUsers = [];
+
+    function renderTable(users) {
+        const table = document.body.querySelector('table');
+        table.innerHTML = '';
+        const headers = Object.keys(users[0]);
+        const thead = document.createElement('thead');
+        const tr = document.createElement('tr');
+        thead.append(tr);
+        table.append(thead);
+        headers.forEach(header => {
+            const th = document.createElement('th');
+            th.textContent = header;
+            tr.append(th);
+
+        })
+        const tbody = document.createElement('tbody');
+        table.append(tbody);
+        users.forEach(user => {
+            const userRow = document.createElement('tr');
+            for (const property in user) {
+                const userCell = document.createElement('td');
+                if (typeof (user[property]) === "object") {
+                    userCell.append(createListByObject(user[property]))
+                } else {
+                    userCell.textContent = user[property];
+                }
+                userRow.append(userCell);
+            }
+            tbody.append(userRow);
+        })
+    }
+
+    async function loadData() {
+        showSpinner(true);
+        const response = await fetch(`https://dummyjson.com/todos?limit=${perPage}&skip=${(page-1)*perPage}`)
+        const json = await response.json();
+        renderTable(json.todos);
+        allUsers = [...json.todos];
+        total = json.total;
+        page = (json.skip / perPage) + 1
+        pageCount = Math.ceil(total / perPage);
+        renderPagination();
+        showSpinner(false);
+    }
+
+    loadData();
+</script>
+</body>
+</html>
