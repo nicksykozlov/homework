@@ -6,12 +6,14 @@ for (let year = 1970; year <= 2052; year++) {
   document.getElementById("year").appendChild(options).innerHTML = year;
 }
 // теперь данные из селекта на до запихнуть в new дате
+// сделать событие 
 
 
-
-
+select.addEventListener('change', () =>{
+  
+});
 const year = new Date().getFullYear();
-// new Date = options.value;
+
 for (let month = 1; month <= 12; month++) {
   const container = document.body.querySelector(".container");
   const monthDiv = document.createElement("div");
