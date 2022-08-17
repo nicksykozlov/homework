@@ -9,7 +9,7 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-      return 'You liked this.';
+      return '';
     }
 
     return e(
@@ -121,7 +121,7 @@ const rootRender = ReactDOM.createRoot(
 // setInterval(tickTac, 1000);
 
 
-class Clock extends React.Component{
+class BLA extends React.Component{
   constructor (props){
     super(props);
     this.state = {date: new Date()}
@@ -137,4 +137,4 @@ class Clock extends React.Component{
 };
 
 const time = ReactDOM.createRoot(document.getElementById('life'));
-time.render(<Clock />)
+time.render(<BLA />)
