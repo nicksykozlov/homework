@@ -1,12 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .container {
+            width: 1500px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .container div {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container div ul {
+            list-style: none;
+            display: grid;
+            width: 360px;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        li:nth-child(7n){
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <script src="./java.js">  </script>
+<div class="container">
+
+</div>
+<script>
+    const year = (new Date()).getFullYear();
+    for (let month = 1; month <= 12; month++) {
+        const container = document.body.querySelector('.container');
+        const monthDiv = document.createElement('div');
+        const h3 = document.createElement('h3');
+        monthDiv.append(h3);
+        const ul = document.createElement('ul');
+        ul.insertAdjacentHTML(
+            'afterbegin',
+            '<li>пн</li><li>вт</li><li>ср</li><li>чт</li><li>пт</li><li>сб</li><li>вс</li>'
+        );
+        const firstDay = new Date(year, month - 1, 1);
+        h3.textContent = firstDay.toLocaleString('cn', {month: 'long'});
+        for (let day = 1; day < firstDay.getDay(); day++) {
+            const li = document.createElement('li');
+            ul.append(li);
+        }
+        const daysCount = new Date(year, month, 0);
+        for (let day = 1; day <= daysCount.getDate(); day++) {
+            const li = document.createElement('li');
+            li.textContent = day;
+            ul.append(li);
+        }
+        monthDiv.append(ul);
+        container.append(monthDiv)
+    }
+</script>
 </body>
 </html>

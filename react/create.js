@@ -2,7 +2,7 @@
 //с тектом вверх, влево, вниз, вправо. Реализуйте функционал сдвига
 //div на 10px при нажатии на кнопку, соответствующую направлению
 
-// class su extends React.Component {
+// class Toggle extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = { isToggleOn: true };
@@ -34,25 +34,22 @@
 //она менялась на следующую, последняя меняется на первую.
 
 // function Img(props) {
-//   return <img src = {
-//     props.src
+//     return <img src = {props.src}/>;
 //   }
-//   />;
-// }
-
-
-
+  
+ 
+    
 
 // const images = [
-//   "https://cdn.pixabay.com/photo/2019/10/15/13/40/winter-4551699_960_720.jpg",
-//   "https://cdn.pixabay.com/photo/2021/04/22/06/40/duck-6198196_960_720.jpg",
-//   "https://cdn.pixabay.com/photo/2021/04/17/23/58/bunny-6187026_960_720.jpg",
-//   "https://cdn.pixabay.com/photo/2020/09/18/21/16/child-5582985_960_720.jpg",
-// ];
+//     "https://cdn.pixabay.com/photo/2019/10/15/13/40/winter-4551699_960_720.jpg",
+//     "https://cdn.pixabay.com/photo/2021/04/22/06/40/duck-6198196_960_720.jpg",
+//     "https://cdn.pixabay.com/photo/2021/04/17/23/58/bunny-6187026_960_720.jpg",
+//     "https://cdn.pixabay.com/photo/2020/09/18/21/16/child-5582985_960_720.jpg",
+//   ];
 
-// const elemets = images.map(() => img);
+// const elemets=images.map(()=>new Image());
 
-// const img = ReactDOM.createRoot(document.getElementById('img'));
+// const img = ReactDOM.createRoot(document.getElementById('img')); 
 // img.render(elemets);
 
 
@@ -211,197 +208,26 @@
 //   blog.render(<Blog posts={posts} />);
 
 //   //Встраивание map() в JSX
-//   function ListItem(props) {
-//     return <li>{props.value}</li>;
-//   }
 
-//   function NumberList(props) {
-//     const numbers = props.numbers;
-//     return (
-//       <ul>
-//         {numbers.map((number) =>
-//           <ListItem key={number.toString()}
-//                     value={number} />
-//         )}
-//       </ul>
-//     );
-//   }
+  // function ListItem(props) {
+  //   return <li>{props.value}</li>;
+  // }
 
-//   const numbe = [1, 2, 3, 4, 5];
+  // function NumberList(props) {
+  //   const numbers = props.numbers;
+  //   return (
+  //     <ul>
+  //       {numbers.map((number) =>
+  //         <ListItem key={number.toString()}
+  //                   value={number} />
+  //       )}
+  //     </ul>
+  //   );
+  // }
 
-//   const map = ReactDOM.createRoot(document.getElementById('map'));
-//   map.render(<NumberList numbers={numbers} />);
+  // const number = [1, 2, 3, 4, 5];
 
+  // const map = ReactDOM.createRoot(document.getElementById('map'));
+  // map.render(<NumberList numbers={number} />);
 
-//Создайте div шириной и высотой 300px и добавьте в него 4 кнопки
-//с тектом вверх, влево, вниз, вправо. Реализуйте функционал сдвига
-//div на 10px при нажатии на кнопку, соответствующую направлению
-
-// class superDiv extends React.Component{
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       x: 0,
-//       y: 0
-//     };
-
-//    move(deltaX, deltaY) {
-//     this.setState(state=>({
-//       x:state.x+deltaX,
-//       y:state.x+deltaY
-//     }
-//     ))
-//    };
-
-//   render() {
-//     return ( <div style={{left:this.state.x, top:this.state.y}}>
-//       <button onClick = {()=>this.move(-100,0)}>Left</button>
-//       <button onClick = {()=>this.move(100,0)}>Right</button>
-//       <button onClick = {()=>this.move(0,-100)}>Top</button>
-//       <button onClick = {()=>this.move(0,100)}>Down</button>
-//     </div>)
-      
-//   };
-// }
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<superDiv\>);
-
-// class superDiv extends React.Component{
-//   constructor() {
-//     super();
-//     this.state = {index:0 };
-//     this.images = [
-//       // вставить массив из картинок из домашки
-//     ]
-
-//    changeImage(deltaX, deltaY) {
-//     this.setState(state=>({
-//       x:state.x+deltaX,
-//       y:state.x+deltaY
-//     }
-//     ))
-//    };
-
-//   render() {
-//     return ( <div style={{left:this.state.x, top:this.state.y}}>
-//       <button onClick = {()=>this.move(-100,0)}>Left</button>
-//       <button onClick = {()=>this.move(100,0)}>Right</button>
-//       <button onClick = {()=>this.move(0,-100)}>Top</button>
-//       <button onClick = {()=>this.move(0,100)}>Down</button>
-//     </div>)
-      
-//   };
-// }
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<superDiv\>);
-
-
-
-// Дан ul  в нем  несколько ли. Под ул сделать кнопку по нажатию на которую в конец гд будет добовлять новый ли с текстопм пункт
-// class Li extends React.Component {
-//   constructor(){
-//     super();
-//     const items = [];
-//     for(let i = 0; i<10; i++){
-//       items.push(Math.random())
-//     }
-//     this.state = {items};
-//   }
   
-//   add() {
-//         this.setState(state=>({
-//           items:[...state.items, Math.random()] }
-//         ))
-//        };
-
-// change(index){
-//   const items = this.state.items.map((item,i)=>i === index ? item + "!" : item)
-//   this.state({items})
-// }
-
-//   render() {
-//     return (
-//       <div>
-//         <ul>
-//           {this.state.items.map((item, index)=> 
-//           <li
-//             key={index}
-//             onClick={()=> this.change(index)}
-//     >
-//       {item}
-//       </li>)
-//       }
-//       </ul>
-      
-//         <button onClick={()=>this.add()} > Нажми на меня</button>
-//       </div>
-//     )
-//   }
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root')); 
-// root.render(<Li/>);
-
-// создайте список ул из 15 ли. Заполните каждый цифрой от 1 до 15
-// Добавить обработчик событий 
-// при клике левой кнопки мыши в ли устанвливается сумма из двух соседних элемнтов
-// при клике правой кнопки мыши в ли устанвливается произведение из двух соседних элемнтов
-class Li extends React.Component {
-  constructor(){
-    super();
-    const items = [];
-    for(let i = 1; i<=15; i++){
-      items.push(i)
-    }
-    this.state = {items};
-  }
-  
-//   add() {
-//         this.setState(state=>({
-//           items:[...state.items] }
-//         ))
-//        };
-
-// change(index){
-//   const items = this.state.items.map((item,i)=>i === index ? item + "!" : item)
-//   this.state({items})
-// }
-
-summ (index){
-  let first = index !==0 ? this.state.items[index-1]:0;
-  let second = index !== this.state.items.length -1 ? this.state.items[index+1] : 0;
-  const items = this.state.items.map((item, i)=> i === index ? first + second : item );
-  this.setState({items});
-
-}
-multiple (event,index){
-  let first = index !==0 ? this.state.items[index-1]:0;
-  let second = index !== this.state.items.length -1 ? this.state.items[index+1] : 1;
-  const items = this.state.items.map((item, i)=> i === index ? first * second : item );
-  this.setState({items});
-  event.preventDefault();
-}
-
-  render() {
-    return (
-      <div>
-        <ul>
-          {this.state.items.map((item, index)=> 
-          <li
-            key={index}
-            onClick={()=> this.summ(index)}
-            onContextMenu={()=> this.multiple(event,index)}
-    >
-      {item}
-      </li>)
-      }
-      </ul>
-      
-        
-      </div>
-    )
-  }
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root')); 
-root.render(<Li/>);
