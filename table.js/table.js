@@ -64,6 +64,7 @@
 //Написать функцию, которая строит таблицу n - td (кол-во столбцов) на k - tr (кол-во строк),
 //используя Javascript. В каждую ячийку записать текст типа 'n - k'.
 
+
 class Table extends React.Component {
   constructor(props) {
     super(props);
