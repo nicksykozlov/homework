@@ -75,9 +75,11 @@ class Table extends React.Component {
     );
     this.state = { template: this.template };
   }
+  
 
   render() {
     return (
+      
       <div>
         <h1>Таблица умножения</h1>
       <table>
