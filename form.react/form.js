@@ -146,7 +146,7 @@ constructor(props){
   this.state = {
     url: "",
     img: "",
-    error:[]
+    error:''
    
 
   }
@@ -158,7 +158,7 @@ constructor(props){
 handleChange(event) {
 
   this.setState({img: event.target.value})
-        
+   
  
   event.preventDefault();
   
@@ -167,9 +167,16 @@ handleChange(event) {
 onClick(event){
       
   this.setState({url: this.state.img})///присвоение только через setState
-  this.setState({error: this.state.url})             
+             
   event.preventDefault();
    
+}
+load(){
+  this.setState({error:''})
+  
+}
+loadFailed(){
+  this.setState({error:"kdhfsgkhfdkglj"})
 }
 
 
@@ -187,7 +194,11 @@ render(){
    
       </div>
       
-      <img src={this.state.url}/>
+      <img src={this.state.url}
+      onLoad={()=>this.load()}
+      onError={()=>this.loadFailed()}
+      />
+      <p>{this.state.error}</p>
       
     </div>
   )
