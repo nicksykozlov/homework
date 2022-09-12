@@ -1,73 +1,73 @@
-// class SummaForm extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {first: 0,
-//                     second:0,
-//                     summ:0,
-//                     flag: true};
+class SummaForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {first: 0,
+                    second:0,
+                    summ:0,
+                    flag: true};
       
   
-//       this.handleChangeFirst = this.handleChangeFirst.bind(this);
-//       this.handleChangeSecond = this.handleChangeSecond.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//       this.checkBox = this.checkBox.bind(this)
-//     }
+      this.handleChangeFirst = this.handleChangeFirst.bind(this);
+      this.handleChangeSecond = this.handleChangeSecond.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.checkBox = this.checkBox.bind(this)
+    }
   
-//     handleChangeFirst(event) {
-//       this.setState({first:Number.parseInt(event.target.value)});
+    handleChangeFirst(event) {
+      this.setState({first:Number.parseInt(event.target.value)});
              
-//     }
-//     handleChangeSecond(event) {
+    }
+    handleChangeSecond(event) {
         
-//         this.setState({second:Number.parseInt(event.target.value)})                
-//       }
+        this.setState({second:Number.parseInt(event.target.value)})                
+      }
 
   
-//     handleSubmit(event) {
-//         if(this.state.flag){
-//             const summ = (this.state.first + this.state.second);
-//             this.setState({summ})
-//            }
-//            else{
-//             const summ = (this.state.first - this.state.second);
-//             this.setState({summ})
-//            }
-//       event.preventDefault();
-//     }
+    handleSubmit(event) {
+        if(this.state.flag){
+            const summ = (this.state.first + this.state.second);
+            this.setState({summ})
+           }
+           else{
+            const summ = (this.state.first - this.state.second);
+            this.setState({summ})
+           }
+      event.preventDefault();
+    }
 
-//     checkBox(event){
-//         this.setState({flag: event.target.checked})
-//     }
+    checkBox(event){
+        this.setState({flag: event.target.checked})
+    }
     
     
   
-//     render() {
-//       return (
-//         <div>
-//         <form onSubmit={this.handleSubmit} >
-//           <label>
+    render() {
+      return (
+        <div>
+        <form onSubmit={this.handleSubmit} >
+          <label>
             
-//             <input type="number" value={this.state.first.value} onChange={this.handleChangeFirst} />
-//           </label>
+            <input type="number" value={this.state.first.value} onChange={this.handleChangeFirst} />
+          </label>
 
-//           <label>
+          <label>
             
-//             <input type="number" value={this.state.second.value} onChange={this.handleChangeSecond} />
-//           </label>
+            <input type="number" value={this.state.second.value} onChange={this.handleChangeSecond} />
+          </label>
 
-//           <input type="submit" value="Отправить" />
-//           <input type="checkbox" onChange={this.checkBox} checked={this.state.flag} /> // обязательно наложить обработчик и состояние cheked
+          <input type="submit" value="Отправить" />
+          <input type="checkbox" onChange={this.checkBox} checked={this.state.flag} /> // обязательно наложить обработчик и состояние cheked
           
-//         </form>
-//         <p>{this.state.summ}</p>
+        </form>
+        <p>{this.state.summ}</p>
     
-//         </div>
-//       );
-//     }
-//   }
-//   const root = ReactDOM.createRoot(document.getElementById("root"));
+        </div>
+      );
+    }
+  }
+  const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(<SummaForm/>);
+root.render(<SummaForm/>);
 
 
 
