@@ -2,7 +2,7 @@ import { useState, Fragment, useEffect } from "react";
 
 const React = require("react");
 
-function Cub(){
+function App(){
     const[count, setCount] = useState(0);
     const[delta, setDelta] = useState(1);
 
@@ -22,4 +22,4 @@ function Cub(){
     </Fragment>
     )
 }
-module.exports = Cub;
+module.exports = App;

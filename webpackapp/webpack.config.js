@@ -13,7 +13,7 @@ module.exports = {
      static: {
       directory: path.join(__dirname, "/"),
     },
-     port: 8081,
+     port: 8082,
      open: true
    },
     module:{
