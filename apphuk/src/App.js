@@ -25,6 +25,7 @@ const currentUser = user.slice(firstUser, lastUser)
 const paginate = pageNumber =>setCurentPage(pageNumber)
 const nextPage = ()=>setCurentPage(prev=>prev+1)
 const prevPage = ()=>setCurentPage(prev=>prev-1)
+
   return( 
    <Fragment>
     <UserProfile userId ={selectedUser}/>
