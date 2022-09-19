@@ -4,3 +4,20 @@ h1{
 .selected{
     background-color: burlywood;
 }
+.page-item{
+    width: 20px;
+    height: 20px;
+    list-style-type: none;
+    border: solid 1px black;
+}
+.pagination{
+    display: flex;
+    gap: 20px;
+    
+}
+.page-link{
+    text-decoration: none;
+    display: flex;  
+    justify-content: center;
+    
+}

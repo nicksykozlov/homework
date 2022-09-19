@@ -1,1 +1,1 @@
-let promise = fetch(https://dummyjson.com/users)
+let promise = fetch("https://dummyjson.com/users')
