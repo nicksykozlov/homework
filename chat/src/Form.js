@@ -15,11 +15,12 @@ export default function Form(props){
                 "Accept": "application/json"
             }
         })
-        
+        setText('')
     }
     return(
         <form onSubmit={sendMessages}>
             <textarea 
+            value={text}
              rows="3"
              onChange={(e)=>setText(e.target.value)}
              />
