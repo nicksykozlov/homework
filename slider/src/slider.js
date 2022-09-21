@@ -19,6 +19,7 @@ export default function Slider() {
     },
   ];
   const [slideIndex, setSlideIndex] = useState(1)
+  const [isPause, setPause] = useState(false);
 
   const nextSlide = () => {
       if(slideIndex !== slides.length){
@@ -46,17 +47,21 @@ export default function Slider() {
     
 
     const interval = setInterval(() => {
+        // if(!isPause){}
         nextSlide();
     }, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [slideIndex]);
+  }, [isPause]);
 
 
   return (
-    <div className="container-slider">
+    <div className="container-slider"
+    // onMouseOver={()=>useState(true)}
+    // onMouseOut={()=>useState(false)}
+    >
         {slides.map((item, index) => {
             return (
                 <div
