@@ -9,13 +9,7 @@ root.render(
   <React.StrictMode>
     <App />
     <Slider
-            slides={true}
-            loop={true}
-            navs={true}
-            pags={true} 
-            auto={true} 
-            stopMouseHover={true}
-            delay={3} 
+           
         />
   </React.StrictMode>
 );

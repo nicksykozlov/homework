@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import BtnSlider from './Btn'
 
 
 export default function Slider() {
-  const dataSlider = [
+  const slides  = [
     {
       img: "https://www.w3schools.com/howto/img_nature_wide.jpg",
       text: "Caption Text 1",
@@ -21,10 +21,10 @@ export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const nextSlide = () => {
-      if(slideIndex !== dataSlider.length){
+      if(slideIndex !== slides.length){
           setSlideIndex(slideIndex + 1)
       } 
-      else if (slideIndex === dataSlider.length){
+      else if (slideIndex === slides.length){
           setSlideIndex(1)
       }
   }
@@ -34,7 +34,7 @@ export default function Slider() {
           setSlideIndex(slideIndex - 1)
       }
       else if (slideIndex === 1){
-          setSlideIndex(dataSlider.length)
+          setSlideIndex(slides.length)
       }
   }
 
@@ -42,17 +42,29 @@ export default function Slider() {
       setSlideIndex(index)
   }
 
+  useEffect(() => {
+    
+
+    const interval = setInterval(() => {
+        nextSlide();
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [slideIndex]);
+
 
   return (
     <div className="container-slider">
-        {dataSlider.map((item, index) => {
+        {slides.map((item, index) => {
             return (
                 <div
                 key={index}
                 className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                 >
                   
-                    <img src={item.img} alt={item.index} />
+                    <img src={item.img} alt="" />
                     <span>{item.text}</span>                    
                     
                 </div>
@@ -62,7 +74,7 @@ export default function Slider() {
         <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
 
         <div className="container-dots">
-            {Array.from({length: 3}).map((item, index) => (
+            {Array.from({length: 3}).map(( item, index) => (
                 <div 
                 onClick={() => moveDot(index + 1)}
                 className={slideIndex === index + 1 ? "dot active" : "dot"}
