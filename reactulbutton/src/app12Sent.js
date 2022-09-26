@@ -1,24 +1,5 @@
 import { useState, Fragment, useEffect } from "react";
-// export default function MyApp(){
-//     const [count,setCount]=useState(0);
-//     const[delta,setDelta]=useState(1)
-//     // function click(){
-//     //     setCount(count +1);
-//     // }
-//     useEffect(()=>{
-//         document.title=`Clicked:${count}`;
-//     },[count])
-//     return (
-//         <Fragment>
-//             <p>{count}</p>
-//             <input 
-//             type='number'
-//              value ={delta} 
-//              onChange={(e)=>setDelta(Number.parseInt(e.target.value))}/>
-//             <button onClick={()=>setCount(count+delta)}>click me</button>
-//         </Fragment>
-//     )
-// }
+
 export default function MyApp() {
     const [text, setText] = useState('');
     const [spisok, setSpisok] = useState([]);
