@@ -16,13 +16,14 @@ function App() {
 
   return (
     <div className="App">
+
       <h1>Выберите продукт</h1>
             <ul>
                 {products.map(products => <li
                 key={products.id}>
                     {products.title}
                     <img src={products.thumbnail} />
-                    <button >Select Product</button>
+                    <button onClick={Buy(props)}>Select Product</button>
                 </li>)}
             </ul>
     
