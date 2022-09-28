@@ -1,10 +1,11 @@
 
 import './App.css';
 import React,{useEffect, useState} from 'react'
-
+import Card from './Card';
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [order, setOrder]=useState([])
 
   useEffect(()=>{
     (async()=>{
@@ -14,6 +15,11 @@ function App() {
     })()
 },[])
 
+function AddToOrder(item){
+  setOrder([item, ...order])
+  console.log(item);
+  }
+
   return (
     <div className="App">
       <h1>Выберите продукт</h1>
@@ -22,7 +28,9 @@ function App() {
                 key={products.id}>
                     {products.title}
                     <img src={products.thumbnail} />
-                    <button >Select Product</button>
+                    <p>Price {products.price}</p>
+                    <p>discountPercentage {products.discountPercentage}%</p>
+                    <button id={products.id} onClick={()=>AddToOrder()}>Select Product</button>
                 </li>)}
             </ul>
     
