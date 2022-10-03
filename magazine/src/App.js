@@ -1,41 +1,41 @@
+import {Fragment, useEffect, useState} from "react";
+import List from "./List";
+import './style.css'
+import Cart from "./Cart";
 
-import './App.css';
-import React,{useEffect, useState} from 'react'
-import Card from './Card';
-function App() {
+export default function App() {
+    const [orders, setOrders] = useState([])
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        (async () => {
+            const response = await fetch('https://dummyjson.com/products');
+            const json = await response.json();
+            setProducts(json.products);
+        })()
+    }, [])
 
-  const [products, setProducts] = useState([]);
-  const [order, setOrder]=useState([])
+    function addToCart(productForAdd) {
+        if (orders.some(order => order.product === productForAdd)) {
+            setOrders(orders.map(order => {
+                if (order.product === productForAdd) {
+                    order.count++;
+                }
+                return order
+            }))
+        } else {
+            setOrders([...orders, {
+                product: productForAdd,
+                count: 1,
+            }])
+        }
+    }
 
-  useEffect(()=>{
-    (async()=>{
-        const response = await fetch('https://dummyjson.com/products');
-        const json = await response.json()
-        setProducts(json.products); 
-    })()
-},[])
-
-function AddToOrder(item){
-  setOrder([item, ...order])
-  console.log(item);
-  }
-
-  return (
-    <div className="App">
-      <h1>Выберите продукт</h1>
-            <ul>
-                {products.map(products => <li
-                key={products.id}>
-                    {products.title}
-                    <img src={products.thumbnail} />
-                    <p>Price {products.price}</p>
-                    <p>discountPercentage {products.discountPercentage}%</p>
-                    <button id={products.id} onClick={()=>AddToOrder()}>Select Product</button>
-                </li>)}
-            </ul>
-    
-    </div>
-  );
+    return (
+        <Fragment>
+            <div className='container'>
+                <Cart orders={orders} setOrders={setOrders}/>
+                <List products={products} addToCart={addToCart}/>
+            </div>
+        </Fragment>
+    )
 }
-
-export default App;
