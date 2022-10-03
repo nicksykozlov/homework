@@ -1,0 +1,10 @@
+li{
+    display: flex;
+    flex-direction: column;
+   
+    
+};
+
+li button{
+    margin: 20px;
+}

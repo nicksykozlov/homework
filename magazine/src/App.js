@@ -30,6 +30,7 @@ export default function App() {
         }
     }
 
+<<<<<<< HEAD
     return (
         <Fragment>
             <div className='container'>
@@ -38,4 +39,40 @@ export default function App() {
             </div>
         </Fragment>
     )
+=======
+  useEffect(()=>{
+    (async()=>{
+        const response = await fetch('https://dummyjson.com/products');
+        const json = await response.json()
+        setProducts(json.products); 
+    })()
+},[])
+
+function AddToOrder(item){
+  setOrder([item, ...order])
+  console.log(item);
+  }
+
+  return (
+    <div className="App">
+
+      <h1>Выберите продукт</h1>
+            <ul>
+                {products.map(products => <li
+                key={products.id}>
+                    {products.title}
+                    <img src={products.thumbnail} />
+<<<<<<< HEAD
+                    <button onClick={Buy(props)}>Select Product</button>
+=======
+                    <p>Price {products.price}</p>
+                    <p>discountPercentage {products.discountPercentage}%</p>
+                    <button id={products.id} onClick={()=>AddToOrder()}>Select Product</button>
+>>>>>>> 070124f9a564b7a020578df1e1816f051ba326cf
+                </li>)}
+            </ul>
+    
+    </div>
+  );
+>>>>>>> 76a734d616e6cf66b016bce8059831ca9be890c5
 }
