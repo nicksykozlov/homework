@@ -8,11 +8,11 @@ const [news, setNews]= useState([])
 
 useEffect(()=>{
     (async()=>{
-      const response = await fetch(`http://localhost:3000/posts/${props.blog}`);
+      const response = await fetch(`http://localhost:3000/posts/${props.id}`);
       const json = await response.json();
       setNews(json)
     })()
-  },[])
+  },[props])
   
   function handelBack(){
     setBlog()

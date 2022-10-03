@@ -1,0 +1,14 @@
+a {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.category{
+    display: flex;
+    flex-direction: column;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+}
