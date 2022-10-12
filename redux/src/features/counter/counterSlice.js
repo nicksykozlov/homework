@@ -5,43 +5,23 @@ import { fetchCount } from './counterAPI';
 
 export const incrementAsync = createAsyncThunk(
   'counter/fetchCount',
-  async (amount) => {
-    const response = await fetchCount(amount);
-   
-    return response.data;
+  async () => {
+    const response = await fetchCount();
+    const json = await response.json()
+    return json.users;
   }
 );
 
 const initialState = {
-  value: 0,
-  status:[],
+  value: [],
+  status: "idle"
 };
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: 'state',
   initialState,
  
-  reducers: {
-    add:  (state, action )=>{
-      state = action.payload.map(e=><li key={e.id}>
-        {e.value}
-
-      </li>)
-
-    },
-
-    increment: (state) => {
-      
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-   
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
-  },
+  reducers: { },
   
   extraReducers: (builder) => {
     builder
@@ -50,7 +30,7 @@ export const counterSlice = createSlice({
       })
       .addCase(incrementAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.value += action.payload;
+        state.value = action.payload;
       });
   },
 });
@@ -60,12 +40,5 @@ export const { increment, decrement, incrementByAmount, add } = counterSlice.act
 
 export const selectCount = (state) => state.counter.value;
 
-
-export const incrementIfOdd = (amount) => (dispatch, getState) => {
-  const currentValue = selectCount(getState());
-  if (currentValue % 2 === 1) {
-    dispatch(incrementByAmount(amount));
-  }
-};
 
 export default counterSlice.reducer;
