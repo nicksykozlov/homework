@@ -1,16 +1,15 @@
 import { createAsyncThunk, createSlice,  } from '@reduxjs/toolkit';
 
 import { fetchCount } from './counterAPI';
-import { infoCount } from './userSlice';
 
 
 
-export const userAsync = createAsyncThunk(// весь масив user
-  'users/fetchUsers',
-  async () => {
-    const response = await fetchCount();
+export const userInfo = createAsyncThunk(// весь масив user
+  'user/fetchUsers',
+  async (id) => {
+    const response = await fetch(`https://dummyjson.com/users/${id}`);
     const json = await response.json()
-    return json.users;
+    return json;
   }
 );
 
@@ -20,41 +19,35 @@ export const userAsync = createAsyncThunk(// весь масив user
 //   status: "idle"
 // };
  
-export const userSlice = createSlice({
-  name: 'user',// название в store
+export const infoSlice = createSlice({
+  name: 'info',// название в store
   
   initialState: {
-    value: [],
+    data: [],
     status: "idle"
-  }
-  ,
+  },
  
   reducers: {    
-    del: (state, action) => {
-      state.value = state.value.filter(item =>item.id !== action.payload)
-      
-    },
-
-         },
-
+        
+  },
 
   
   extraReducers: (builder) => {
     builder
-      .addCase(userAsync.pending, (state) => {
+      .addCase(userInfo.pending, (state) => {
         state.status = 'loading';
       })//идет загрузка 
-      .addCase(userAsync.fulfilled, (state, action) => {
+      .addCase(userInfo.fulfilled, (state, action) => {
         state.status = 'idle';
         state.value = action.payload;
       });
   },
 });
 
-export const { del, info } = userSlice.actions;
+export const {  } = infoSlice.actions;
 
 
-export const selectCount = (state) => state.user.value;
+export const infoCount = (state) => state.info.data;
 
 // state - аргумент функции. user название в store 
 // reducer: {
@@ -62,4 +55,4 @@ export const selectCount = (state) => state.user.value;
   // },
 //value - это значение которое мы инициализировали в const initialState и меняли  extraReducers
 // value может быть любое слово только тогда надо везде использовать новое слов
-export default userSlice.reducer;
+export default infoSlice.reducer;
