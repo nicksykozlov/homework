@@ -1,0 +1,17 @@
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+img{
+    width: 70px;
+    height: 70px;
+}
+

@@ -3,6 +3,13 @@ import { useDispatch, useSelector } from "react-redux"
 import {selectProducts, fetchProducts, statusProduct} from "../store/productStore"
 import Spiner from "./spiner"
 import { Link } from "react-router-dom";
+import {
+    add,
+    del,
+ } from '../store/cardStore';
+ import "../css/products.css"
+
+
 
 export default function Products (){
     
@@ -19,13 +26,19 @@ useEffect(()=>{
 
 },[dispatch])
 
-    return(<>
+    return(<div className="products">
     {status === 'loading' ? <Spiner/> : ''}
+
     {products.map(product=> <article key={product.id} >
+
      <Link to ={`/products/${product.id}`}>{product.title}</Link> 
-     <button>Добавить в карзину</button>  
+     <img src={product.thumbnail} alt="" />
+
+     <button onClick={() => dispatch(add())}>Добавить в корзину</button>  
+     <button onClick={() => dispatch(del())}>Убрать из корзины</button>  
+
     </article>)}
     
-    </>)
+    </div>)
 
 }

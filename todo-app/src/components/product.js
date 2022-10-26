@@ -1,9 +1,16 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
+import {  useDispatch } from 'react-redux';
+import {
+    add,
+    del,
+ } from '../store/cardStore';
 
 export default function Product(){
     const {id} = useParams('id')
+
+    const dispatch = useDispatch()
 
     const [product, setProduct] = useState()
     
@@ -19,10 +26,13 @@ export default function Product(){
     return(
        <>
        <Link to='/'>Back</Link>
-       {product &&
+       {product &&//логическое и  true только в случае, если все операнды содержат значение true
        <div>
+        
        <h1>{product.title}</h1>
-       <button>Добавить в карзину</button>
+
+       <button onClick={() => dispatch(add())}>Добавить в корзину</button>
+       <button onClick={() => dispatch(del())}>Убрать из корзины</button>
        </div>
        }
        </>
