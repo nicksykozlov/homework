@@ -5,7 +5,7 @@ import Spiner from "./spiner"
 import { Link } from "react-router-dom";
 import {
     add,
-    del,
+    
  } from '../store/cardStore';
  import "../css/products.css"
 
@@ -33,9 +33,8 @@ useEffect(()=>{
 
      <Link to ={`/products/${product.id}`}>{product.title}</Link> 
      <img src={product.thumbnail} alt="" />
-
-     <button onClick={() => dispatch(add())}>Добавить в корзину</button>  
-     <button onClick={() => dispatch(del())}>Убрать из корзины</button>  
+ 
+    
 
     </article>)}
     

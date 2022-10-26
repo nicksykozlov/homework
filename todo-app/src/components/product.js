@@ -2,10 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import {  useDispatch } from 'react-redux';
-import {
-    add,
-    del,
- } from '../store/cardStore';
+
 
 export default function Product(){
     const {id} = useParams('id')
@@ -22,6 +19,10 @@ export default function Product(){
         })()
     },[id, setProduct])
     
+    function addItemsTocard(){
+        dispatch(add(product.id))
+
+    }
     
     return(
        <>
@@ -31,8 +32,8 @@ export default function Product(){
         
        <h1>{product.title}</h1>
 
-       <button onClick={() => dispatch(add())}>Добавить в корзину</button>
-       <button onClick={() => dispatch(del())}>Убрать из корзины</button>
+       <button onClick={addItemsTocard}>Добавить в корзину</button>
+     
        </div>
        }
        </>
