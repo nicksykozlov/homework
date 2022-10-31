@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectTodo, fetchTodo } from "./todoSlice";
 
 import {delTodo,
-  addTodos
+  addTodo
 
 } from "./todoSlice";
 
@@ -12,8 +12,7 @@ export default function Todo() {
 
   const dispatch = useDispatch();
 
-  const [text, setText] = useState([])
-  
+  const [text, setText] = useState({})
 
   useEffect(() => {
     dispatch(fetchTodo());
@@ -21,15 +20,14 @@ export default function Todo() {
 
   const handleAction = () => {
     if(text.trim().length) {
-      dispatch(addTodos(text));
-      setText('');
+      dispatch(addTodo(text));
+      setText({});
     }
   }
 
   return (
     <div>
       <input onChange={(e) => setText(e.target.value)} type="text" />
-
       <button onClick={handleAction} >Add</button>
       <table>
         <thead>
@@ -42,7 +40,7 @@ export default function Todo() {
           {todo.map((todos) => (
             <tr key={todos.id}>
               <td>
-                {todos.text}
+                {todos.todo}
                
                 <button 
                 onClick={() => dispatch(delTodo(todos.id))}

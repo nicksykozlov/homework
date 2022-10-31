@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchTodo = createAsyncThunk("todo/fetchTodo", async () => {
-  const response = await fetch(`http://192.168.0.139:3000/todos`);
+  const response = await fetch(`http://192.168.0.139/todos`);
   const json = await response.json();
-  return json
+  return json.todos;
 });
 
 export const delTodo = createAsyncThunk(
   "todo/delTodo",
   async (id, { dispatch }) => {
-    const response = await fetch(`http://192.168.0.139:3000/todos/${id}`, {
+    const response = await fetch(`https://dummyjson.com/todos/${id}`, {
       method: "DELETE",
     });
     console.log(response);
@@ -22,21 +22,22 @@ export const addTodos = createAsyncThunk(
   "todo/addTodo",
   async (text, { dispatch }) => {
     const todo = {
-      text: text,
+      title: text,
+      userId: 1,
       completed: false,
     };
 
-    const response = await fetch(`http://192.168.0.139:3000/todos`, {
+    const response = await fetch(`http://192.168.0.139/todos`, {
       method: "POST",
       headers:{
         "Content-Type":'aplication.json'
       },
-      body: JSON.stringify(todo),
-      
+      body: JSON.stringify(todo)
     });
-     
+     const data = await response.json()
+     console.log(data);
 
-    dispatch(addTodo(todo));
+    dispatch(addTodo(text));
   }
 );
 
