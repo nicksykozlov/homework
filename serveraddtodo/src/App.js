@@ -1,19 +1,35 @@
-import React from 'react';
-import Todo from './features/counter/todo';
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import {useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from './features/counter/todoSlice';
+import NewTodoForm from './features/counter/NewTodoForm';
+import TodoList from './features/counter/TodoList';
+import TodoItem from './features/counter/TodoItem';
 import './App.css';
 
+
+
 function App() {
+  const [text, setText] = useState('');
+  const dispatch = useDispatch();
+
+  const handleAction = () => {
+    if(text.trim().length) {
+      dispatch(addTodo({text}));
+      setText('');
+    }
+  };
+
   return (
-    <BrowserRouter>
-    
-      <Routes>
-        
-        <Route path="/" element={<Todo />} />
-        
-    
-      </Routes>
-    </BrowserRouter>
+    <div className='App'>
+     
+      {/* <TodoItem/> */}
+      <NewTodoForm
+        value={text}
+        updateText={setText}
+        handleAction={handleAction}
+      />
+      <TodoList />
+    </div>
   );
 }
 
