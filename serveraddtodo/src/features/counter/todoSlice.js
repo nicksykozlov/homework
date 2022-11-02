@@ -2,20 +2,16 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchTodos = createAsyncThunk(
   "todos/fetchTodos",
-  async function (_, { rejectWithValue }) {
-    try {
+  async function () {
+  
       const response = await fetch("http://localhost:3000/todos");
 
-      if (!response.ok) {
-        throw new Error("Server Error!");
-      }
+     
 
       const data = await response.json();
 
       return data;
-    } catch (error) {
-      return rejectWithValue(error.message);
-    }
+   
   }
 );
 
@@ -31,7 +27,7 @@ export const deleteTodo = createAsyncThunk(
         throw new Error("Can't delete task. Server error.");
       }
 
-      dispatch(removeTodo({ id }));
+      dispatch(removeTodo( ));
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -71,12 +67,12 @@ export const addNewTodo = createAsyncThunk(
     try {
       const todo = {
         title: text,
-        userId: 1,
+        
         completed: false,
       };
 
       const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos",
+        "https://http://localhost:3000/todos",
         {
           method: "POST",
           headers: {

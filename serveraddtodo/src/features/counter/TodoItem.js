@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux';
 import {toggleComplete, removeTodo} from './todoSlice'
+import {useParams} from 'react-router-dom'
 
-const TodoItem = ({ id, text, completed }) => {
+const TodoItem = ({  text, completed }) => {
   const dispatch = useDispatch();
+  const {id} = useParams();
 
   return (
     <li>

@@ -4,15 +4,10 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
+  return (<>
+  
+  </>
     
-      <Routes>
-        
-        <Route path="/" element={<Todo />} />
-    
-      </Routes>
-    </BrowserRouter>
   );
 }
 

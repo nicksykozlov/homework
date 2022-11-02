@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <form >
+      <input type="file" name="img" />
+     
+      <input type="submit" value="upload">    
+      <img src="" alt=""> 
+    </form>
+    
+    
+    
+    <script>
+      const form = document.body.querySelector('form')
+      form.addEventListener('submit', function(event){
+        event.preventDefault()
+        const data = new FormData()
+        data.append('image', this.elements.img.files[0])
+        fetch('http://192.168.0.161:3000/upload',{
+          method: 'POST',
+          body: data
+        })
+        .then(res => res.json())
+        .then(log => console.log(log))
+        .catch(e => console.error(e))
+
+        fetch('http://192.168.0.161:3000/files')
+        .then(res => res.json())
+       
+        .then((data) => {
+        data.forEach(element => {
+          const img = document.createElement('img')
+          img.src=`http://192.168.0.161:3000/${element} `
+          document.body.prepend(img)
+          
+        });
+        })
+        .catch(e => console.error(e))
+        
+
+      })
+      
+    </script>
+  </body>
+</html>
