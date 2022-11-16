@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-
-export default function Section(props){
+import Weather from "./Weather";
+export default function Section(props){// props это весь json прилител из APP
 
     const[selected, setSelected]= useState([]);
 
@@ -19,9 +19,12 @@ export default function Section(props){
                 {area.name}
             </li>)}
         </ul>
-                {selected?.areas?.length&& // 
-                <Section key={selected.id} areas={selected.areas}/>}
+                {selected?.areas?.length&& <Section key={selected.id} areas={selected.areas}/>}
 
+                 {selected?.areas?.length===0 &&  <Weather  city={selected.name}/>} 
+                 
+
+                                                    
         </>
         
     )
