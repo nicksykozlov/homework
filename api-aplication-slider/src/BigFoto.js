@@ -11,10 +11,10 @@ export default function BigFoto(props){
 
         <div className="modal">
             <div className="container">
-            <img className="close" src={Close} alt="" />
-            <img className="strelka" src={Left} alt="#"/>
+            <img className="close" src={Close} alt=""  onClick={props.Onclose}/>
+            <img className="strelka" src={Left} alt="#" onClick={()=>props.onNavigate(-1)}/>
             <img className="big" src={props.image} alt="#"/>
-            <img className="strelka" src={Right} alt="#"/>
+            <img className="strelka" src={Right} onClick={()=>props.onNavigate(1)} alt="#"/>
             </div>
         </div>
     )

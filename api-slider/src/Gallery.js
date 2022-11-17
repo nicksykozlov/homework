@@ -16,6 +16,7 @@ export default function Gallery()
             setPhotos(json)
         })()
     }, [setPhotos])
+    
     function updateSelected(index){
         const currentIndex = photos.findIndex(img => img.id === selected.id);
         if(currentIndex+index < 0){
