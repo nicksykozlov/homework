@@ -26,17 +26,20 @@ useEffect(() => {
 
 
 return(
-    <>
-    <ul>
-        {photos.map((img)=><li
+    <div className="gallery">
+    
+        {photos.map((img)=><img 
+        src={img.urls.small} 
+        alt="#"
         onClick={()=>setSelected(img)}
-        key={img.id}><img src={img.urls.small} alt="#"/></li>)}
-    </ul>
-    {selected &&  <BigFoto  image={selected.urls.regular}/>
+        />)}
+              
+    
+    {selected &&  <BigFoto  image={selected.urls.small}/>
     // логическое И возврашает или selected или <BigFoto>
     } 
     
-    </>
+    </div>
 )
 }
 
