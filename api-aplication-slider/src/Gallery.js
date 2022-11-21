@@ -4,23 +4,36 @@ import BigFoto from "./BigFoto";
 export default function Gallery(){
 
 const [photos, setPhotos]= useState([]);
-const [selected, setSelected] = useState(false)
+const [selected, setSelected] = useState(false);
+const [search, setSearch] = useState('')
+
 
 useEffect(() => {
     (async () => {
-      const response = await fetch(`https://api.unsplash.com/photos?page=1`,{
+      let url = `https://api.unsplash.com/photos?page=1&per_page=10`
+
+      if (search){
+
+        url = `https://api.unsplash.com/search/photos?page=1&per_page=10&query=${search}`
+
+      }
+      const response = await fetch(url,{
         headers:{
             'Authorization': `Client-ID 8nxbh2UEHmzKnQA9zhiu3p8qA5FinreZp3EvUp7lSog`
         }
       }
       );
       const json = await response.json();
-
-      setPhotos(json)
+      if (search){
+        setPhotos(json.results)
+      }  else{
+        setPhotos(json)
+      }
+     
     
       console.log(json);
     })();
-  }, [setPhotos]);
+  }, [setPhotos, search]);
 
   function updateSelected (index){
     const curentIndex = photos.findIndex(img=>img.id===selected.id);
@@ -36,6 +49,8 @@ useEffect(() => {
 console.log(photos);
 return(
     <div className="gallery">
+
+      <input type="search" value={search} onChange={(e)=>setSearch(e.target.value)}/>
     
         {photos.map((img)=><img 
         key={img.id}
