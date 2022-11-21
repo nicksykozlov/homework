@@ -15,6 +15,7 @@ export default function BigFoto(props){
             <img className="strelka" src={Left} alt="#" onClick={()=>props.onNavigate(-1)}/>
             <img className="big" src={props.image} alt="#"/>
             <img className="strelka" src={Right} onClick={()=>props.onNavigate(1)} alt="#"/>
+            <span>{props.page}</span>
             </div>
         </div>
     )

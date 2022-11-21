@@ -32,8 +32,8 @@ useEffect(() => {
     {setSelected(photos[curentIndex+index])}
 
   }
-
-
+ console.log(selected);
+console.log(photos);
 return(
     <div className="gallery">
     
@@ -45,7 +45,11 @@ return(
         />)}
               
     
-    {selected &&  <BigFoto  image={selected.urls.small} onNavigate={index=>updateSelected(index)} Onclose={()=>setSelected(false)}/>
+    {selected &&  <BigFoto  image={selected.urls.small} 
+    page={Array.from({ photos: 10 }, (v, k) => k)}
+    onNavigate={index=>updateSelected(index)} 
+    Onclose={()=>setSelected(false)}
+    />
     // логическое И возврашает или selected или <BigFoto>
     } 
     
