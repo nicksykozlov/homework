@@ -26,9 +26,7 @@ export default function User (){
         <p>{user.last_name}</p>
         <p>{user.email}</p>
         <img src={user.avatar} alt="#"/>
-        <button
-       
-        >Delete User</button>
+        
 
     </>
     
