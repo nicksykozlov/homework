@@ -32,15 +32,15 @@ return(
     <Link to={'/newuser'}>Add New User</Link>
   <div className='user'>
     <ul>{users.map(user=><Link key={user.id} to={`/${user.id}`}>
-  <li key={user.id}>
-    
+    <li key={user.id}>
     <h3>{user.first_name}</h3>
-   <p>{user.email}</p> 
+    <p>{user.email}</p> 
     <img  src={user.avatar} alt="#"/>
+    </li>
     
-   </li></Link>)
-
+    </Link>) 
     }</ul>
+    <button></button>
     </div>
     
    
