@@ -1,8 +1,8 @@
-import { Routes, Route, Link,  } from "react-router-dom";
+import {  Link,  } from "react-router-dom";
 
 import React,{useEffect, useState} from 'react'
 import './App.css';
-import User from "./User";
+
 
 //добавить добовление редактирование и удаление смотреть на сайте https://reqres.in/
 
@@ -29,9 +29,7 @@ return(
   <div>
       
     <h1>Hello ReqRes users!</h1>
-    <input type="text" placeholder="Please Enter The Name"/>
-    <input type="text" placeholder="Please Enter The Jobe"/>
-
+    <Link to={'/newuser'}>Add New User</Link>
   <div className='user'>
     <ul>{users.map(user=><Link key={user.id} to={`/${user.id}`}>
   <li key={user.id}>
