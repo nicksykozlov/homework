@@ -14,6 +14,24 @@ export default function User (){
             
         })()
     },[id])
+
+   
+   
+        const DeleteUser = (id)=>{
+          
+           fetch(`https://reqres.in/api/users/${id}`,{
+            method:"DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+              },
+           }) 
+           alert(`Delete user id ${id} successful`)
+                     
+        }
+
+        
+
+
   
    return(
     <>
@@ -26,6 +44,10 @@ export default function User (){
         <p>{user.last_name}</p>
         <p>{user.email}</p>
         <img src={user.avatar} alt="#"/>
+
+        <button onClick={()=>DeleteUser(user.id)}>Delete User</button>
+        {/* обязательно передать id user */}
+        <button>Edit User</button>
         
 
     </>

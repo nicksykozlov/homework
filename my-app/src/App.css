@@ -1,11 +1,8 @@
 body{
     margin: 50px;
 }
-li{
-    list-style: none;
-    text-align: center;
-}
-ul{
+
+.user{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;

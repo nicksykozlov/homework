@@ -31,15 +31,14 @@ return(
     <h1>Hello ReqRes users!</h1>
     <Link to={'/newuser'}>Add New User</Link>
   <div className='user'>
-    <ul>{users.map(user=><Link key={user.id} to={`/${user.id}`}>
-    <li key={user.id}>
+    <>{users.map(user=><Link key={user.id} to={`/${user.id}`}>
+    
     <h3>{user.first_name}</h3>
     <p>{user.email}</p> 
     <img  src={user.avatar} alt="#"/>
-    </li>
-    
+       
     </Link>) 
-    }</ul>
+    }</>
     
     </div>
     
