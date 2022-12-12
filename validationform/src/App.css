@@ -1,0 +1,21 @@
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+input{
+  width: 600px;
+  height: 30px;
+}
+div{
+  background-color: rgb(160, 175, 216);
+  border-radius: 5px;
+  width: 610px;
+}
+button{
+  height: 50px;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 5px;
+}
