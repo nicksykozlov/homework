@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import './App.css';
-
+import Rating from 'react'
 
 
 const MyTextInput = ({ label, ...props }) => {
@@ -127,6 +127,7 @@ const SignupForm = () => {
           <button type="submit">Submit</button>
         </Form>
       </Formik>
+    
     </>
   );
 };
