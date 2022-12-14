@@ -46,3 +46,17 @@
 //  с = Number(с);
 // let result = (a + b + c);
 // console.log("Рузультат", result, a*b);
+{/* <html>
+	<head>
+		<title>canvasExample</title>
+        <meta charset='utf-8' />
+	</head>
+	<body>
+		<canvas height='320' width='480' id='example'>Обновите браузер</canvas>
+		<script>
+			var example = document.getElementById("example"),
+			    ctx     = example.getContext('2d');
+			ctx.fillRect(0, 0, example.width, example.height);
+		</script>
+	</body>
+</html> */}
