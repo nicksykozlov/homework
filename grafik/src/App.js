@@ -1,72 +1,58 @@
 
 import './App.css';
+import React from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
-function App() {
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
+  },
+};
 
+const labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 
-  const labels =  ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
-  const data = [12, 19, 3, 5, 2, 3];
-
+export const data = {
+  labels,
+  datasets: [
+    {//план
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: 'green'
+    },
+    {//факт
+      label: '# of Votes',
+      data: [4, 9, 3, 5, 2, 3],
+      backgroundColor: 'red'
+    },
+    
    
-  console.log(labels);
-  
-
-  return (
-    <div className="App">
-     <div className='data'> 
-      {data.map(e=><div key={e.id} width = {e.valueOf(e)}></div>)}
-      </div>
-      <div className='labels'>
-      {labels.map(e=><div key={e.id}>{e.valueOf(e)}</div>)}
-      </div>
-     
-    </div>
-  );
+  ],
+};
+export default function App() {
+  return <Bar options={options} data={data} />;
 }
-
-export default App;
-
-
-
-
-// // Получаем canvas элемент
-// let canvas = document.getElementById('canvas'); 
- 
-// // Указываем элемент для 2D рисования
-// let ctx = canvas.getContext('2d');
-// ctx.fillStyle = "black"; // Задаём чёрный цвет для линий 
-// ctx.lineWidth = 2.0; // Ширина линии
-// ctx.beginPath(); // Запускает путь
-// ctx.moveTo(30, 10); // Указываем начальный путь
-// ctx.lineTo(30, 600); // Перемешаем указатель
-// ctx.lineTo(500, 460); // Ещё раз перемешаем указатель
-// ctx.stroke(); // Делаем контур
-
-// ctx.fillStyle = "black";
-// // Цикл для отображения значений по Y 
-// for(let i = 0; i < 6; i++) { 
-//     ctx.fillText((5 - i) * 20 + "", 4, i * 80 + 60); 
-//     ctx.beginPath(); 
-//     ctx.moveTo(25, i * 80 + 60); 
-//     ctx.lineTo(30, i * 80 + 60); 
-//     ctx.stroke(); 
-// }
- 
-// // Массив с меткам месяцев
-// let labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']; 
- 
-// // Выводим меток
-// for(var i=0; i<5; i++) { 
-//     ctx.fillText(labels[i], 50+ i*100, 475); 
-// }
-
-
-
-
-//   return(
-//     <div>
-//       <canvas width="700" height="700" id="canvas"></canvas>
-//     </div>
-//   )
-  
