@@ -6,6 +6,7 @@ import Draggable from 'react-draggable'; // Both at the same time
 function App() {
   const [text, setText] = useState('')
   const [spisok, setSpisok] = useState([]);
+  const [card, setCard] = useState(null)
 
   function AddText(e){
     e.preventDefault();
@@ -17,15 +18,50 @@ function log(event,data){
   console.log(event, data)
 }
 
+function dragStartHendler (e, item){
+  setCard(item) 
+console.log('drag',item)
+}
+
+function dragEndHendler (e){
+  e.target.style.background='aqua'
+ 
+}
+function dragOverHendler (e){
+e.preventDefault()
+e.target.style.background='red'
+}
+
+function dropHendler (e, item){
+  e.preventDefault()
+
+  console.log('drag',item)
+}
+
 
   return (
     <div className="App">
+    
      <div className='stolb'>
-
+     
     <ul>  
-     {spisok.map((item, index) =><li 
-      key={index}>{item}</li>)}
+    
+     {spisok.map((item, index) =>
+    
+     <li 
+      onDragStart={(e)=>dragStartHendler(e,item)}
+      onDragLeave={(e)=>dragEndHendler(e)}
+      onDragEnd={(e)=>dragEndHendler(e)}
+      onDragOver={(e)=>dragOverHendler(e)}
+      onDrag={(e)=>dropHendler(e,item)}
+      key={index}
+      draggable={true}
+      >{item}</li>
+      
+      )}
+    
    </ul>
+  
      </div>
      <div className='stolb'></div>
      <div className='stolb'></div>
