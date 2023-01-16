@@ -47,11 +47,8 @@
   gap:20px;
   justify-content: space-around;
 }
-ul{
-  display: flex;
-  flex-direction: column;
-}
-li{
-  list-style: none;
-  border: 1px solid black
+.card{border: 1px solid black;
+  width: 100px;
+  height: 100px;
+
 }

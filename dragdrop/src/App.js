@@ -1,12 +1,12 @@
 
 import './App.css';
 import {useState} from "react";
-import Draggable from 'react-draggable'; // Both at the same time
+
 
 function App() {
   const [text, setText] = useState('')
-  const [spisok, setSpisok] = useState([]);
-  const [card, setCard] = useState(null)
+  const [spisok, setSpisok] = useState([]); //прилетают данные из инпута
+  const [card, setCard] = useState(null) // сюда прилетает дроп файл 
 
   function AddText(e){
     e.preventDefault();
@@ -14,13 +14,11 @@ function App() {
     setText('');
     
   }
-function log(event,data){
-  console.log(event, data)
-}
 
+//когда взяли карточку
 function dragStartHendler (e, item){
   setCard(item) 
-console.log('drag',item)
+  console.log('drag',item)
 }
 
 function dragEndHendler (e){
@@ -32,59 +30,58 @@ e.preventDefault()
 e.target.style.background='red'
 }
 
+// отпустили карточку
 function dropHendler (e, item){
   e.preventDefault()
-
-  console.log('drag',item)
+  console.log('drop',item)
+  setSpisok(spisok.map(c=>{
+    if(c===item){
+      return{...c, card}
+    }
+    if(c===card){
+      return{...c, item}
+    }
+    return c
+  }))
+  e.target.style.background='aqua'
+  
 }
+ const sortCard=(a,b)=>{
+  if(a.spisok>b.spisok){
+    return 1
+  }
+  else{
+    return-1
+  }
+ }
 
 
   return (
     <div className="App">
     
-     <div className='stolb'>
+  
      
-    <ul>  
     
-     {spisok.map((item, index) =>
     
-     <li 
-      onDragStart={(e)=>dragStartHendler(e,item)}
-      onDragLeave={(e)=>dragEndHendler(e)}
-      onDragEnd={(e)=>dragEndHendler(e)}
-      onDragOver={(e)=>dragOverHendler(e)}
-      onDrag={(e)=>dropHendler(e,item)}
-      key={index}
+     {spisok.sort(sortCard).map((item )=>
+    
+     <div className='card'
+      onDragStart={(e)=>dragStartHendler(e,item)}//когда взяли карточку
+      onDragLeave={(e)=>dragEndHendler(e)}// вышли за пределы другой карточки 
+      onDragEnd={(e)=>dragEndHendler(e)}// отпустили перемещение 
+      onDragOver={(e)=>dragOverHendler(e)}//находимся над другим объектом
+      onDrag={(e)=>dropHendler(e,item)}// отпустили карточку
       draggable={true}
-      >{item}</li>
+      key={item}
+      >{item}
+      </div>
       
       )}
-    
-   </ul>
-  
-     </div>
-     <div className='stolb'></div>
-     <div className='stolb'></div>
-
+ 
      <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
      <input type="submit" value="добавить" onClick={AddText} />
 
-     <Draggable
-       
-        handle=".handle"
-        defaultPosition={{x: 0, y: 0}}
-        position={null}
-        grid={[25, 25]}
-        scale={1}
-        onStart={log}
-        onDrag={log}
-        onStop={log}>
-        <div>
-          <div className="handle">Drag from here</div>
-          <div>This readme is really dragging on...</div>
-        </div>
-      </Draggable>
-   
+      
     </div>
     
   );

@@ -1,4 +1,5 @@
 import Products from './Products'
+
 import {
     createBrowserRouter,
   
@@ -9,6 +10,7 @@ import {
     {
       path: "/",
       element: <Products/>,
+      
     },
   ]);
 

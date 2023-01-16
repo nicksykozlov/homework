@@ -20,17 +20,18 @@ export function UserCounter() {
 },[dispatch] )
  
   return (
-    
+    <div>
     <ul>
-      {/* {info.map(user=>
+      {info.map(user=>
       <li key={user.id}
       
       >
              
         {user.firstName} 
         {user.lastName}           
-        </li>)} */}
+        </li>)}
         {console.log(info)}
     </ul>
+    </div>
   );
 }
