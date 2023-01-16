@@ -1,17 +1,56 @@
-img{
-    width: 100px;
-    height: 100px
+.card{
+    width: 18rem;
+    align-items: center;
 }
 li{
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+
+
 }
 ul{
     display: flex;
-    flex-wrap: wrap;
+   flex-wrap: wrap;
     gap: 50px;
-    align-content: center;
-    justify-content: center
+
 }
+img{height: 100%;
+    
+}
+.cardImg{
+    max-height: 300px;
+}
+
+:root {
+    --star-size: 30px;
+    --star-color: rgb(134, 39, 39);
+    --star-background: #fc0;
+  }
+  
+  .stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times; 
+    line-height: 1;
+    
+    
+  }
+  .stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .button{
+    display: flex;
+    gap: 40px;
+    align-items:center;
+  }
+
