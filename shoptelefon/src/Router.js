@@ -4,6 +4,7 @@ import {
 
 import Products from "./components/products/Index";
 import View from "./components/product/View";
+import WishList from "./components/wishlist/index";
 
 export default createBrowserRouter([
     {
@@ -17,6 +18,10 @@ export default createBrowserRouter([
     {
         path: "/products/:id",
         element: <View/>,
+    },
+    {
+        path: "/wishlist",
+        element: <WishList/>
     }
 
 ]);

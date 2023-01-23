@@ -2,6 +2,8 @@ import Rating from "./rating";
 import {NavLink} from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function Card({product}){
+
+   
     return (
         <div className="card product-card">
              <Link to='/'>Back</Link>
@@ -16,7 +18,9 @@ export default function Card({product}){
                 <span className='price'>$ {product.price}</span>
                 <div className="buttons-container">
                     <i className="bi bi-cart"></i>
-                    <i className="bi bi-heart"></i>
+                    <Link to='/products/wishlist'>
+                        
+                    <i className="bi bi-heart"></i></Link>
                 </div>
             </div>
         </div>

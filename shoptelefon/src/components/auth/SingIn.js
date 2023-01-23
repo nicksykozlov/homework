@@ -4,7 +4,7 @@ import api from '../../api/products'
 import {useDispatch} from "react-redux";
 import {signIn} from "../../store/userSlice";
 
-export default function SignUpForm({setToken}) {
+export default function SignIn({setToken}) {
 
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -13,7 +13,7 @@ export default function SignUpForm({setToken}) {
     const dispatch = useDispatch();
     function formSubmit(e) {
         e.preventDefault();
-        api.register({name, email, password})
+        api.login({email, password})
             .then(res => {
                 setToken( res.data.access_token);
                 dispatch(()=>signIn(res.data.user))
@@ -27,17 +27,6 @@ export default function SignUpForm({setToken}) {
     }
 
     return (<form onSubmit={formSubmit}>
-        <div className="mb-3">
-            <label htmlFor="name" className="form-label">Имя</label>
-            <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                className="form-control"
-                id="name"
-                name='name'
-                placeholder="Имя"/>
-        </div>
         <div className="mb-3">
             <label htmlFor="email" className="form-label">Email</label>
             <input
@@ -61,7 +50,7 @@ export default function SignUpForm({setToken}) {
                 placeholder="Пароль"/>
         </div>
         <div className="mb-3">
-            <input type="submit" className="btn btn-info" value='Зарегистрироваться'/>
+            <input type="submit" className="btn btn-info" value='Войти'/>
         </div>
         {errors.length > 0 &&
             <ul>
